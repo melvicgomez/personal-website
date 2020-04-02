@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@ant-design/icons": "^4.0.5",
     "antd": "^3.26.11",
     "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^2.19.7",

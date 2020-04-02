@@ -3,7 +3,7 @@ module.exports = {
     title: `Melvic Gomez`,
     description: `I am Melvic, full stack developer and UI designer enthusiast based in the Philippines with almost 5 years of experience on creating software application (mobile and web) and websites.`,
     author: `Melvic Gomez`,
-    siteUrl: 'https://www.melvicgomez.com'
+    siteUrl: "https://www.melvicgomez.com",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -30,27 +30,36 @@ module.exports = {
     },
     `gatsby-plugin-sitemap`,
     {
-      resolve: 'gatsby-plugin-htaccess',
+      resolve: "gatsby-plugin-htaccess",
       options: {
         https: true,
       },
     },
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        google: {
+          families: ["Sen", "DM Sans"],
+        },
+      },
+    },
     `gatsby-plugin-styled-components`,
     {
-      resolve: 'gatsby-plugin-antd',
+      resolve: "gatsby-plugin-antd",
       options: {
-        style: true
-      }
-  },
-  {
+        style: true,
+      },
+    },
+    {
       resolve: "gatsby-plugin-less",
       options: {
         javascriptEnabled: true,
         modifyVars: {
-          // "primary-color": "#183C52",
-          // "heading-color": "#777777"
-        }
-      }
+          "font-size-base": "18px",
+          "text-color": "rgba(0,0,0,0.8)",
+          "primary-color": "#C02F1D",
+        },
+      },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
