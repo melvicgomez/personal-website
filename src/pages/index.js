@@ -4,7 +4,7 @@ import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import { Row, Col, Avatar, Button, Icon } from "antd"
+import { Row, Col, Avatar, Button, Icon, Divider } from "antd"
 
 const HomePageContainer = styled(Row)`
   min-height: 100vh;
@@ -33,10 +33,15 @@ const HomePageContainer = styled(Row)`
     z-index: 0;
     background-color: ${props => props.theme.primaryColor};
   }
+
+  .copyright-label {
+    padding: 20px 0px;
+    color: white;
+  }
 `
 
 const AvatarImage = styled(Avatar)`
-  margin-top: 50px;
+  margin-top: 75px;
   margin-bottom: 25px;
   border: 6px solid rgb(255, 255, 255);
 `
@@ -93,6 +98,19 @@ const ContentComponent = styled.div`
     color: white;
     padding: 0px 4px;
   }
+
+  .tools-individual {
+    display: inline-flex;
+    flex-flow: wrap;
+
+    span {
+      margin: 0px 4px;
+    }
+  }
+
+  .btn-hello {
+    color: white;
+  }
 `
 
 const IndexPage = () => (
@@ -106,11 +124,6 @@ const IndexPage = () => (
         xl={{ span: 9 }}
         xxl={{ span: 7 }}
       >
-        {/* <div className="nav-section">
-          <SayHelloBtn className="btn-hello" size="large">
-            SAY HELLO
-          </SayHelloBtn>
-        </div> */}
         <div>
           <AvatarImage
             alt="M"
@@ -125,8 +138,7 @@ const IndexPage = () => (
             <div className="section-header">About Me</div>
             <p>
               Hello! My name is <span className="my-name">Melvic Gomez</span>{" "}
-              and I am a{" "}
-              <span className="highlight">full stack developer </span>
+              and I am a <span className="highlight">full stack developer</span>
               <span role="img" aria-label="computer">
                 💻
               </span>{" "}
@@ -141,25 +153,28 @@ const IndexPage = () => (
             <p>
               I spend my free times{" "}
               <b>
-                reading books partnered with hot coffee
+                reading books
+                <span role="img" aria-label="books">
+                  📚
+                </span>
+                , drinking coffee
                 <span role="img" aria-label="coffee">
                   ☕
                 </span>
               </b>{" "}
               or{" "}
               <b>
-                playing games
+                playing computer games
                 <span role="img" aria-label="controller">
                   🎮
-                </span>{" "}
-                at home
+                </span>
               </b>
               .
             </p>
 
             <Row type="flex" justify="space-between">
               <Col>
-                <Button icon="download" type="primary">
+                <Button icon="download" ghost type="primary">
                   Resume
                 </Button>
               </Col>
@@ -192,22 +207,60 @@ const IndexPage = () => (
             </Row>
           </div>
 
+          <Divider />
+
           <div className="row-wrapper">
             <div className="section-header">Mission</div>
-            <p>
-              Develop applications and websites that impact and solves the pain
-              points of the users.
-            </p>
+            <div>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
           </div>
 
           <div className="row-wrapper">
-            <div className="section-header">My Tools</div>
-            <p>
-              Develop applications and websites that impact and solves the pain
-              points of the users.
-            </p>
+            <div className="section-header">Vision</div>
+            <div>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+          </div>
+
+          <Divider />
+
+          <div className="row-wrapper">
+            <div className="section-header">Development</div>
+            <div className="tools-individual">
+              Javascript<span>·</span>NodeJs<span>·</span>ReactJs<span>·</span>
+              React&nbsp;Native<span>·</span>PHP<span>·</span>Laravel
+              <span>·</span>
+              MySQL<span>·</span>VS&nbsp;Code<span>·</span>Android&nbsp;Studio
+              <span>·</span>Xcode<span>·</span>GIT<span>·</span>Bootstrap
+              <span>·</span>Ant&nbsp;Design
+            </div>
+          </div>
+
+          <div className="row-wrapper">
+            <div className="section-header">Design</div>
+            <div className="tools-individual">
+              Adobe XD<span>·</span>Adobe Photoshop
+            </div>
           </div>
         </ContentComponent>
+      </Col>
+      <Col span={24} style={{ backgroundColor: "#C02F1D" }}>
+        <Row type="flex" justify="center">
+          <Col
+            xs={{ span: 22 }}
+            md={{ span: 18 }}
+            lg={{ span: 14 }}
+            xl={{ span: 9 }}
+            xxl={{ span: 7 }}
+          >
+            <div className="copyright-label">
+              <small>© 2020 Melvic Gomez | All Rights Reserved.</small>
+            </div>
+          </Col>
+        </Row>
       </Col>
     </HomePageContainer>
   </Layout>
