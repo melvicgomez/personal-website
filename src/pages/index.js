@@ -228,8 +228,8 @@ const IndexPage = () => (
             <div className="tools-individual">
               Javascript<span>·</span>NodeJs<span>·</span>ReactJs<span>·</span>
               React&nbsp;Native<span>·</span>PHP<span>·</span>Laravel
-              <span>·</span>
-              MySQL<span>·</span>VS&nbsp;Code<span>·</span>Android&nbsp;Studio
+              <span>·</span>MySQL<span>·</span>CI/CD<span>·</span>VS&nbsp;Code
+              <span>·</span>Android&nbsp;Studio
               <span>·</span>Xcode<span>·</span>GIT<span>·</span>Bootstrap
               <span>·</span>Ant&nbsp;Design
             </div>

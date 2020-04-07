@@ -15,11 +15,18 @@ const theme = {
 
 const AppContainer = styled.div``
 
-const Layout = ({ children }) => (
-  <ThemeProvider theme={theme}>
-    <AppContainer>{children}</AppContainer>
-  </ThemeProvider>
-)
+const Layout = ({ children }) => {
+  console.log(
+    "%cHello! Checking on something?\nFeel free to send a message directly. 🙋‍♂️",
+    `background: ${theme.primaryColor}; color: white; font-size:1.5em; padding: 6px;`
+  )
+
+  return (
+    <ThemeProvider theme={theme}>
+      <AppContainer>{children}</AppContainer>
+    </ThemeProvider>
+  )
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
