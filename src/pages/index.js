@@ -107,10 +107,6 @@ const ContentComponent = styled.div`
       margin: 0px 4px;
     }
   }
-
-  .btn-hello {
-    color: white;
-  }
 `
 
 const IndexPage = () => (
