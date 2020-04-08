@@ -65,10 +65,17 @@ const ContentComponent = styled.div`
     }
 
     :first-child {
+      background-color: #24292e;
+    }
+    :nth-child(2) {
       background-color: #0e76a8;
     }
+
+    :nth-child(3) {
+      background-color: #3b5998;
+    }
     :last-child {
-      background: #0e76a8;
+      background: ${props => props.theme.primaryColor};
       background: linear-gradient(
         45deg,
         #f09433 0%,
@@ -78,10 +85,6 @@ const ContentComponent = styled.div`
         #bc1888 100%
       );
       margin-right: initial;
-    }
-
-    :nth-child(2) {
-      background-color: #3b5998;
     }
   }
 
@@ -122,7 +125,7 @@ const IndexPage = () => (
       >
         <div>
           <AvatarImage
-            alt="M"
+            alt="Melvic Gomez Profile Photo"
             src={require("../images/melvic-profile-image.jpg")}
             shape="circle"
             size={200}
@@ -175,6 +178,14 @@ const IndexPage = () => (
                 </Button>
               </Col>
               <Col>
+                <a
+                  className="btn-socials"
+                  href="https://github.com/melvicgomez"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Icon type="github" theme="outlined" />
+                </a>
                 <a
                   className="btn-socials"
                   href="https://www.linkedin.com/in/melvic-gomez-3a563189"
