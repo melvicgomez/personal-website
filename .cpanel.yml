@@ -1,8 +1,8 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/yuxsklr/melvicgomez.com/testing-folder
-    # - /bin/gatsby build
+    - export DEPLOYPATH=/home/yuxsulkr/melvicgomez.com/testing-folder
+    # - /home/yuxsklr/bin/gatsby build
     - /bin/rm -Rf $DEPLOYPATH
     - /bin/mkdir $DEPLOYPATH
     - /bin/cp .cpanel.yml $DEPLOYPATH
