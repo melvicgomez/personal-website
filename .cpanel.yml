@@ -2,6 +2,7 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/yuxsulkr/melvicgomez.com/testing-folder
+    - npm i
     - gatsby build
     - /bin/rm -Rf $DEPLOYPATH
     - /bin/mkdir $DEPLOYPATH
