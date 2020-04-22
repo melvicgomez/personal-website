@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/yusklr/melvicgomez.com/testing-folder
+    - export DEPLOYPATH=/home/yuxsklr/melvicgomez.com/testing-folder
     - gatsby build
     - /bin/rm -Rf $DEPLOYPATH
     - /bin/mkdir $DEPLOYPATH
