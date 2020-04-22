@@ -1,0 +1,22 @@
+stages:
+  - build
+  - test
+  - deploy
+
+build-website:
+  stage: build
+  image: node:10.15.0
+  only:
+    refs:
+      - master
+  script:
+    - echo "build-website"
+
+deploy-website:
+  stage: deploy
+  image: node:10.15.0
+  only:
+    refs:
+      - master
+  script:
+    - echo "deploy-website"
