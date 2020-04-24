@@ -32,7 +32,7 @@ deploy-website:
     - echo "SSH_USERNAME $SSH_USERNAME"
     - eval $(ssh-agent -s)
     - echo "ssh agent"
-    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
     - echo "ssh private key"
     # generate $SSH_PRIVATE_KEY in your bash terminal and KEYS in your CPanel SSH
     # Command to generate $SSH_PRIVATE_KEY: ssh-keygen -t ed25519
