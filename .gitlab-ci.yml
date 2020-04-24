@@ -27,14 +27,14 @@ deploy-website:
     refs:
       - master
   before_script:
-    - mkdir -p ~/.ssh
-    - chmod 700 ~/.ssh
     - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
     - eval $(ssh-agent -s)
     # generate $SSH_PRIVATE_KEY in your bash terminal and KEYS in your CPanel SSH
     # Command to generate $SSH_PRIVATE_KEY: ssh-keygen -f ~/Downloads/id_ssh_hmp.key
     - echo -n "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
-    - ssh-keyscan -t rsa $SSH_HOST -p $SSH_PORT >> ~/.ssh/known_hosts
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - ssh-keyscan -p $SSH_PORT -t rsa $SSH_HOST >> ~/.ssh/known_hosts
     - chmod 644 ~/.ssh/known_hosts
 
   script:
