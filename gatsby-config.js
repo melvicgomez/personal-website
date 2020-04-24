@@ -76,7 +76,12 @@ module.exports = {
         cookieDomain: "www.melvicgomez.com",
       },
     },
-    `gatsby-plugin-robots-txt`,
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        policy: [{ userAgent: "*", allow: "/", disallow: "/404" }],
+      },
+    },
     // `gatsby-plugin-offline`,
   ],
 }
