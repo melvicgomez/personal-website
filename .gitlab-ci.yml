@@ -1,46 +1,46 @@
-cache:
-  paths:
-    - node_modules/
+# cache:
+#   paths:
+#     - node_modules/
 
-stages:
-  - build
-  - deploy
+# stages:
+#   - build
+#   - deploy
 
-build-website:
-  stage: build
-  image: mhart/alpine-node:12
-  only:
-    refs:
-      - master
-  script:
-    - npm install -g gatsby-cli
-    - npm install
-    - gatsby build
-  artifacts:
-    paths:
-      - public/
+# build-website:
+#   stage: build
+#   image: mhart/alpine-node:12
+#   only:
+#     refs:
+#       - master
+#   script:
+#     - npm install -g gatsby-cli
+#     - npm install
+#     - gatsby build
+#   artifacts:
+#     paths:
+#       - public/
 
-deploy-website:
-  stage: deploy
-  image: mwienk/docker-lftp:latest
-  only:
-    refs:
-      - master
-  before_script:
-    - mkdir -p ~/.ssh
-    - chmod 700 ~/.ssh
-    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
-    - eval $(ssh-agent -s)
-    # generate $SSH_PRIVATE_KEY in your bash terminal and KEYS in your CPanel SSH
-    # Command to generate $SSH_PRIVATE_KEY: ssh-keygen -f ~/Downloads/id_ssh_hmp.key
-    - echo -n "$SSH_PRIVATE_KEY" | ssh-add - > /dev/null
-    - ssh-keyscan $SSH_HOST >> ~/.ssh/known_hosts
-    - chmod 644 ~/.ssh/known_hosts
+# deploy-website:
+#   stage: deploy
+#   image: mwienk/docker-lftp:latest
+#   only:
+#     refs:
+#       - master
+#   before_script:
+#     - mkdir -p ~/.ssh
+#     - chmod 700 ~/.ssh
+#     - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+#     - eval $(ssh-agent -s)
+#     # generate $SSH_PRIVATE_KEY in your bash terminal and KEYS in your CPanel SSH
+#     # Command to generate $SSH_PRIVATE_KEY: ssh-keygen -f ~/Downloads/id_ssh_hmp.key
+#     - echo -n "$SSH_PRIVATE_KEY" | ssh-add - > /dev/null
+#     - ssh-keyscan $SSH_HOST >> ~/.ssh/known_hosts
+#     - chmod 644 ~/.ssh/known_hosts
 
-  script:
-    - tar -zcvf staging.tar.gz -C public/ .
-    - ssh $SSH_USERNAME@$SSH_HOST "mkdir -p ~$FTP_RELEASE_DIR"
-    - lftp -u $FTP_DEPLOY_USERNAME,$FTP_DEPLOY_PASSWORD $FTP_HOST -e "set ftp:ssl-allow false; put -e staging.tar.gz -o ~$FTP_ARCHIVE_DEST/staging.tar.gz; quit"
-    - ssh $SSH_USERNAME@$SSH_HOST "cd ~$FTP_RELEASE_DIR/"
-    - ssh $SSH_USERNAME@$SSH_HOST "tar -C ~$FTP_RELEASE_DIR/ -xzvf ~$FTP_ARCHIVE_DEST/staging.tar.gz"
-    - ssh $SSH_USERNAME@$SSH_HOST "rm -rf ~$FTP_ARCHIVE_DEST/staging.tar.gz"
+#   script:
+#     - tar -zcvf staging.tar.gz -C public/ .
+#     - ssh $SSH_USERNAME@$SSH_HOST "mkdir -p ~$FTP_RELEASE_DIR"
+#     - lftp -u $FTP_DEPLOY_USERNAME,$FTP_DEPLOY_PASSWORD $FTP_HOST -e "set ftp:ssl-allow false; put -e staging.tar.gz -o ~$FTP_ARCHIVE_DEST/staging.tar.gz; quit"
+#     - ssh $SSH_USERNAME@$SSH_HOST "cd ~$FTP_RELEASE_DIR/"
+#     - ssh $SSH_USERNAME@$SSH_HOST "tar -C ~$FTP_RELEASE_DIR/ -xzvf ~$FTP_ARCHIVE_DEST/staging.tar.gz"
+#     - ssh $SSH_USERNAME@$SSH_HOST "rm -rf ~$FTP_ARCHIVE_DEST/staging.tar.gz"
