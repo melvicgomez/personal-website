@@ -29,18 +29,14 @@ deploy-website:
   before_script:
     - eval $(ssh-agent -s)
     - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
-    - echo "SSH_PRIVATE_KEY 1"
+    # generate $SSH_PRIVATE_KEY in your bash terminal and KEYS in your CPanel SSH
+    # Command to generate $SSH_PRIVATE_KEY: ssh-keygen -t ed25519
     - mkdir -p ~/.ssh
-    - echo "SSH_PRIVATE_KEY 2"
     - chmod 700 ~/.ssh
-    - echo "SSH_PRIVATE_KEY 3"
     - ssh-keyscan $SSH_HOST >> ~/.ssh/known_hosts
-    - echo "SSH_PRIVATE_KEY 4"
     - chmod 644 ~/.ssh/known_hosts
-    - echo "SSH_PRIVATE_KEY 5"
 
   script:
-    - echo "SSH_PRIVATE_KEY 6"
     - tar -zcvf staging.tar.gz -C public/ .
     - ssh $SSH_USERNAME@$SSH_HOST "mkdir -p ~$FTP_RELEASE_DIR"
     - lftp -u $FTP_DEPLOY_USERNAME,$FTP_DEPLOY_PASSWORD $FTP_HOST -e "set ftp:ssl-allow false; put -e staging.tar.gz -o ~$FTP_ARCHIVE_DEST/staging.tar.gz; quit"
