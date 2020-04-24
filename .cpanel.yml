@@ -1,8 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/yuxsulkr/melvicgomez.com/testing-folder
+    - export DEPLOYPATH=/home/yuxsulkr/melvicgomez.com
     - /bin/rm -Rf $DEPLOYPATH
     - /bin/mkdir $DEPLOYPATH
-    - /bin/cp .cpanel.yml $DEPLOYPATH
-    # - /bin/cp -R public $DEPLOYPATH
+    - /bin/cp -R public $DEPLOYPATH
