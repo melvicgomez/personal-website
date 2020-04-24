@@ -27,23 +27,14 @@ deploy-website:
     refs:
       - master
   before_script:
-    - echo "SSH_PRIVATE_KEY $SSH_PRIVATE_KEY"
-    - echo "SSH_HOST $SSH_HOST"
-    - echo "SSH_USERNAME $SSH_USERNAME"
     - eval $(ssh-agent -s)
-    - echo "ssh agent"
-    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
-    - echo "ssh private key"
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
     # generate $SSH_PRIVATE_KEY in your bash terminal and KEYS in your CPanel SSH
-    # Command to generate $SSH_PRIVATE_KEY: ssh-keygen -t ed25519
+    # Command to generate $SSH_PRIVATE_KEY: ssh-keygen -f ~/Downloads/id_ssh_hmp.key
     - mkdir -p ~/.ssh
-    - echo "mkdir"
     - chmod 700 ~/.ssh
-    - echo "chmod 700"
     - ssh-keyscan $SSH_HOST >> ~/.ssh/known_hosts
-    - echo "keyscan"
     - chmod 644 ~/.ssh/known_hosts
-    - echo "chmod 644"
 
   script:
     - tar -zcvf staging.tar.gz -C public/ .
