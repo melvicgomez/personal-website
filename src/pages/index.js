@@ -4,7 +4,7 @@ import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import { Row, Col, Avatar, Button, Icon, Divider } from "antd"
+import { Row, Col, Avatar, Icon, Divider } from "antd"
 
 const HomePageContainer = styled(Row)`
   min-height: 100vh;
@@ -114,10 +114,11 @@ const ContentComponent = styled.div`
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Personal Website" />
     <HomePageContainer type="flex" justify="center">
       <Col
         xs={{ span: 22 }}
+        sm={{ span: 22 }}
         md={{ span: 18 }}
         lg={{ span: 14 }}
         xl={{ span: 9 }}
@@ -134,49 +135,21 @@ const IndexPage = () => (
 
         <ContentComponent>
           <div className="row-wrapper">
-            <div className="section-header">About Me</div>
+            <div className="section-header">Melvic Gomez</div>
             <p>
-              Hello! My name is <span className="my-name">Melvic Gomez</span>{" "}
-              and I am a <span className="highlight">full stack developer</span>
-              <span role="img" aria-label="computer">
-                💻
-              </span>{" "}
-              and <span className="highlight">UI designer</span>
-              <span role="img" aria-label="mobile phone">
-                📱
-              </span>{" "}
-              enthusiast based in the Philippines with almost 5 years of
-              experience on creating software application (mobile and web) and
-              websites.
+              Hello! I am a{" "}
+              <span className="highlight">full stack developer</span> and{" "}
+              <span className="highlight">UI designer</span> enthusiast based in
+              the Philippines with almost 5 years of experience on creating
+              software application (mobile and web) and websites.
             </p>
             <p>
-              I spend my free times{" "}
-              <b>
-                reading books
-                <span role="img" aria-label="books">
-                  📚
-                </span>
-                , drinking coffee
-                <span role="img" aria-label="coffee">
-                  ☕
-                </span>
-              </b>{" "}
-              or{" "}
-              <b>
-                playing computer games
-                <span role="img" aria-label="controller">
-                  🎮
-                </span>
-              </b>
-              .
+              I like spending my free times{" "}
+              <b>reading books, drinking coffee</b> or{" "}
+              <b>playing computer games</b>.
             </p>
 
             <Row type="flex" justify="space-between">
-              <Col>
-                <Button icon="download" ghost type="primary">
-                  Resume
-                </Button>
-              </Col>
               <Col>
                 <a
                   className="btn-socials"
@@ -216,21 +189,26 @@ const IndexPage = () => (
 
           <Divider />
 
-          <div className="row-wrapper">
-            <div className="section-header">Mission</div>
-            <div>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </div>
-          </div>
-
-          <div className="row-wrapper">
-            <div className="section-header">Vision</div>
-            <div>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </div>
-          </div>
+          <Row type="flex" justify="center" gutter={[12, 12]}>
+            <Col xs={{ span: 24 }} sm={{ span: 24 }} md={{ span: 12 }}>
+              <div>
+                <div className="section-header">Mission</div>
+                <div>
+                  To equip myself with necessary knowledge and skills on
+                  developing an efficient product.
+                </div>
+              </div>
+            </Col>
+            <Col xs={{ span: 24 }} sm={{ span: 24 }} md={{ span: 12 }}>
+              <div>
+                <div className="section-header">Vision</div>
+                <div>
+                  To produce an efficient product that helps people improving
+                  their basic daily process.
+                </div>
+              </div>
+            </Col>
+          </Row>
 
           <Divider />
 

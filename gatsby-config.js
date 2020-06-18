@@ -55,7 +55,7 @@ module.exports = {
       options: {
         javascriptEnabled: true,
         modifyVars: {
-          "font-size-base": "18px",
+          "font-size-base": "16px",
           "text-color": "rgba(0,0,0,0.8)",
           "primary-color": "#C02F1D",
         },
