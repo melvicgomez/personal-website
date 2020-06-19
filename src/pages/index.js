@@ -1,10 +1,14 @@
-import React from "react"
-import styled from "styled-components"
+import React from "react";
+import styled from "styled-components";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
-import { Row, Col, Avatar, Icon, Divider } from "antd"
+import { Row, Col, Avatar, Icon, Divider } from "antd";
+
+import projectIcon from "../images/project.png";
+import blogIcon from "../images/social-media.png";
+import uxIcon from "../images/ux.png";
 
 const HomePageContainer = styled(Row)`
   min-height: 100vh;
@@ -34,27 +38,126 @@ const HomePageContainer = styled(Row)`
     background-color: ${props => props.theme.primaryColor};
   }
 
-  .copyright-label {
-    padding: 20px 0px;
-    color: white;
+  .stats-wrapper {
+    height: 100px;
+    > div {
+      height: 100%;
+      padding: 10px 16px;
+    }
   }
-`
+
+  .stats-wrapper.projects {
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #021b79;
+    background-image: url(${projectIcon});
+    background-size: 45%;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: 20px;
+
+    > div {
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background: linear-gradient(
+        45deg,
+        rgba(33, 33, 33, 0.87) 0%,
+        rgba(33, 33, 33, 0) 100%
+      );
+
+      > div:first-child {
+        font-size: 2em;
+        font-weight: bold;
+        line-height: 1;
+      }
+      > div:last-child {
+        opacity: 0.9;
+      }
+    }
+  }
+
+  .stats-wrapper.blogs {
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #159957;
+    background-image: url(${blogIcon});
+    background-size: 45%;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: 20px;
+
+    > div {
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background: linear-gradient(
+        45deg,
+        rgba(33, 33, 33, 0.87) 0%,
+        rgba(33, 33, 33, 0) 100%
+      );
+
+      > div:first-child {
+        font-size: 2em;
+        font-weight: bold;
+        line-height: 1;
+      }
+      > div:last-child {
+        opacity: 0.9;
+      }
+    }
+  }
+
+  .stats-wrapper.designs {
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #fdbb2d;
+    background-image: url(${uxIcon});
+    background-size: 45%;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: 20px;
+
+    > div {
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background: linear-gradient(
+        45deg,
+        rgba(33, 33, 33, 0.87) 0%,
+        rgba(33, 33, 33, 0) 100%
+      );
+
+      > div:first-child {
+        font-size: 2em;
+        font-weight: bold;
+        line-height: 1;
+      }
+      > div:last-child {
+        opacity: 0.9;
+      }
+    }
+  }
+`;
 
 const AvatarImage = styled(Avatar)`
   margin-top: 75px;
   margin-bottom: 25px;
   border: 6px solid rgb(255, 255, 255);
-`
+`;
 const ContentComponent = styled.div`
   .btn-socials {
     border-color: transparent;
-    margin-right: 6px;
+    margin-right: 8px;
     padding: 4px;
     display: inline-flex;
     border-radius: 4px;
 
     > i {
-      font-size: 24px;
+      font-size: 20px;
       color: #ffffff;
     }
 
@@ -110,7 +213,7 @@ const ContentComponent = styled.div`
       margin: 0px 4px;
     }
   }
-`
+`;
 
 const IndexPage = () => (
   <Layout>
@@ -194,8 +297,8 @@ const IndexPage = () => (
               <div>
                 <div className="section-header">Mission</div>
                 <div>
-                  To equip myself with necessary knowledge and skills on
-                  developing an efficient product.
+                  To equip myself with necessary knowledge and skills on making
+                  a worldwide software.
                 </div>
               </div>
             </Col>
@@ -203,8 +306,8 @@ const IndexPage = () => (
               <div>
                 <div className="section-header">Vision</div>
                 <div>
-                  To produce an efficient product that helps people improving
-                  their basic daily process.
+                  To publish a worldwide software that helps people on improving
+                  their daily processes.
                 </div>
               </div>
             </Col>
@@ -230,25 +333,44 @@ const IndexPage = () => (
               Adobe XD<span>·</span>Adobe Photoshop
             </div>
           </div>
-        </ContentComponent>
-      </Col>
-      <Col span={24} style={{ backgroundColor: "#C02F1D" }}>
-        <Row type="flex" justify="center">
-          <Col
-            xs={{ span: 22 }}
-            md={{ span: 18 }}
-            lg={{ span: 14 }}
-            xl={{ span: 9 }}
-            xxl={{ span: 7 }}
-          >
-            <div className="copyright-label">
-              <small>© 2020 Melvic Gomez | All Rights Reserved.</small>
+
+          <Divider />
+
+          <div className="row-wrapper">
+            <div className="section-header" style={{ marginBottom: 5 }}>
+              My Stats
             </div>
-          </Col>
-        </Row>
+            <Row gutter={[12, 12]}>
+              <Col xs={24} sm={24} md={8}>
+                <div className="stats-wrapper projects">
+                  <div>
+                    <div>0</div>
+                    <div>Projects</div>
+                  </div>
+                </div>
+              </Col>
+              <Col xs={24} sm={24} md={8}>
+                <div className="stats-wrapper blogs">
+                  <div>
+                    <div>0</div>
+                    <div>Blogs</div>
+                  </div>
+                </div>
+              </Col>
+              <Col xs={24} sm={24} md={8}>
+                <div className="stats-wrapper designs">
+                  <div>
+                    <div>0</div>
+                    <div>Designs</div>
+                  </div>
+                </div>
+              </Col>
+            </Row>
+          </div>
+        </ContentComponent>
       </Col>
     </HomePageContainer>
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;

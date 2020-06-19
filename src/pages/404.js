@@ -1,7 +1,7 @@
-import React from "react"
-import Layout from "../components/layout"
-import styled from "styled-components"
-import { Button, Icon, Row, Col } from "antd"
+import React from "react";
+import Layout from "../components/layout";
+import styled from "styled-components";
+import { Button, Icon, Row, Col } from "antd";
 
 const StyledNotFoundPage = styled.div`
   height: 100vh;
@@ -11,7 +11,7 @@ const StyledNotFoundPage = styled.div`
     width: 100%;
     height: auto;
   }
-`
+`;
 
 function NotFoundPage() {
   return (
@@ -45,7 +45,7 @@ function NotFoundPage() {
         </Row>
       </StyledNotFoundPage>
     </Layout>
-  )
+  );
 }
 
-export default NotFoundPage
+export default NotFoundPage;
