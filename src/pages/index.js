@@ -247,8 +247,8 @@ const IndexPage = () => (
               software application (mobile and web) and websites.
             </p>
             <p>
-              I like spending my free times{" "}
-              <b>reading books, drinking coffee</b> or{" "}
+              I like spending my free times <b>reading books</b>,{" "}
+              <b>listening to podcast</b>, <b>drinking coffee</b> or{" "}
               <b>playing computer games</b>.
             </p>
 
