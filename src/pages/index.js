@@ -350,12 +350,14 @@ const IndexPage = () => (
                 </div>
               </Col>
               <Col xs={24} sm={24} md={8}>
-                <div className="stats-wrapper blogs">
-                  <div>
-                    <div>0</div>
-                    <div>Blogs</div>
+                <a href="/blogs" target="_blank">
+                  <div className="stats-wrapper blogs">
+                    <div>
+                      <div>2</div>
+                      <div>Blogs</div>
+                    </div>
                   </div>
-                </div>
+                </a>
               </Col>
               <Col xs={24} sm={24} md={8}>
                 <div className="stats-wrapper designs">
