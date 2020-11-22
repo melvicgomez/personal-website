@@ -344,7 +344,7 @@ const IndexPage = () => (
               <Col xs={24} sm={24} md={8}>
                 <div className="stats-wrapper projects">
                   <div>
-                    <div>0</div>
+                    <div>1</div>
                     <div>Projects</div>
                   </div>
                 </div>
