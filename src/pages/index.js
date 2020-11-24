@@ -342,7 +342,7 @@ const IndexPage = () => (
             </div>
             <Row gutter={[12, 12]}>
               <Col xs={24} sm={24} md={8}>
-                <a href="/projects" target="_blank">
+                <a href="/projects">
                   <div className="stats-wrapper projects">
                     <div>
                       <div>1</div>
@@ -352,7 +352,7 @@ const IndexPage = () => (
                 </a>
               </Col>
               <Col xs={24} sm={24} md={8}>
-                <a href="/blogs" target="_blank">
+                <a href="/blogs">
                   <div className="stats-wrapper blogs">
                     <div>
                       <div>2</div>
@@ -362,12 +362,14 @@ const IndexPage = () => (
                 </a>
               </Col>
               <Col xs={24} sm={24} md={8}>
-                <div className="stats-wrapper designs">
-                  <div>
-                    <div>0</div>
-                    <div>Designs</div>
+                <a href="/designs">
+                  <div className="stats-wrapper designs">
+                    <div>
+                      <div>0</div>
+                      <div>Designs</div>
+                    </div>
                   </div>
-                </div>
+                </a>
               </Col>
             </Row>
           </div>
