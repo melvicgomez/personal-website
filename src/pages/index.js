@@ -338,16 +338,18 @@ const IndexPage = () => (
 
           <div className="row-wrapper">
             <div className="section-header" style={{ marginBottom: 5 }}>
-              My Stats
+              My Personal Stats
             </div>
             <Row gutter={[12, 12]}>
               <Col xs={24} sm={24} md={8}>
-                <div className="stats-wrapper projects">
-                  <div>
-                    <div>1</div>
-                    <div>Projects</div>
+                <a href="/projects" target="_blank">
+                  <div className="stats-wrapper projects">
+                    <div>
+                      <div>1</div>
+                      <div>Projects</div>
+                    </div>
                   </div>
-                </div>
+                </a>
               </Col>
               <Col xs={24} sm={24} md={8}>
                 <a href="/blogs" target="_blank">

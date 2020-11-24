@@ -6,6 +6,7 @@ import { Button, Icon, Row, Col } from "antd";
 const StyledNotFoundPage = styled.div`
   height: 100vh;
   display: flex;
+  justify-content: center;
 
   img {
     width: 100%;
@@ -27,14 +28,13 @@ function NotFoundPage() {
             xxl={{ span: 10 }}
           >
             <img
-              src={require("../images/undraw-page-not-found.png")}
-              alt="Page not found placeholder."
+              src={require("../images/undraw_source_code_xx2e.png")}
+              alt="Page under construction"
             />
             <br />
             <div style={{ textAlign: "center" }}>
               <p>
-                You hit a page does not exist in my website. Try to click the
-                link to see what I have in this website.
+              oops... this page is currently under construction. Go back after a while and expect something new.
               </p>
               <Button type="link" href="/">
                 <Icon type="arrow-left" />

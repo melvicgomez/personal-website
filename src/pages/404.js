@@ -6,7 +6,7 @@ import { Button, Icon, Row, Col } from "antd";
 const StyledNotFoundPage = styled.div`
   height: 100vh;
   display: flex;
-
+  justify-content: center;
   img {
     width: 100%;
     height: auto;
