@@ -49,8 +49,6 @@ jobs:
           name: bundle-tar
 
       - name: Upload bundle tar file in Hostinger using FTP
-        env:
-          FTP_ARCHIVE_DEST:
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           server: ${{ secrets.SERVER_HOST }}
@@ -70,8 +68,6 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           envs: RELEASE_DIR,ARCHIVE_DIR
           script: |
-            echo "I am $RELEASE_DIR"
-            echo "I am $ARCHIVE_DIR"
             rm -rf "$RELEASE_DIR/*"
             cd "$ARCHIVE_DIR/"
             tar -C "$RELEASE_DIR/" -xzvf bundle.tar.gz
