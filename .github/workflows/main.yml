@@ -8,6 +8,7 @@ on:
 
 jobs:
   build: # set depends on what you need
+    name: Build and Artifact
     runs-on: ubuntu-latest
 
     steps:
@@ -36,6 +37,8 @@ jobs:
           path: bundle.tar.gz
 
   deploy: # set depends on what you need
+    name: Deploy project
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
