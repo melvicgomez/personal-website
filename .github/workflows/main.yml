@@ -35,14 +35,14 @@ jobs:
           name: bundle-tar
           path: bundle.tar.gz
 
-deploy: # set depends on what you need
-  runs-on: ubuntu-latest
+  deploy: # set depends on what you need
+    runs-on: ubuntu-latest
 
-  steps:
-    - name: Download a single artifact
-      uses: actions/download-artifact@v2
-      with:
-        name: bundle-tar
-    
-    - name: Check bundle tar info
-      run: ls
+    steps:
+      - name: Download a single artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: bundle-tar
+
+      - name: Check bundle tar info
+        run: ls
