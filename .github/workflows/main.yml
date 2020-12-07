@@ -43,7 +43,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Download a single artifact
+      - name: Download bundle artifact from previous job
         uses: actions/download-artifact@v2
         with:
           name: bundle-tar
@@ -62,7 +62,7 @@ jobs:
         uses: appleboy/ssh-action@master
         env:
           RELEASE_DIR: ${{ secrets.RELEASE_DIR }}
-          ARCHIVE_DEST: ${{ secrets.FTP_ARCHIVE_DEST }}
+          ARCHIVE_DEST: ${{ secrets.SSH_ARCHIVE_DIR }}
         with:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USERNAME }}
@@ -71,5 +71,5 @@ jobs:
           envs: RELEASE_DIR,ARCHIVE_DEST
           script: |
                 rm -rf $RELEASE_DIR/*
-                tar -C $RELEASE_DIR/ -xzvf $FTP_ARCHIVE_DEST/bundle.tar.gz
-                rm -rf $FTP_ARCHIVE_DEST/bundle.tar.gz
+                tar -C $RELEASE_DIR/ -xzvf $ARCHIVE_DEST/bundle.tar.gz
+                rm -rf $ARCHIVE_DEST/bundle.tar.gz
