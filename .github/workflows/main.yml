@@ -60,16 +60,14 @@ jobs:
         uses: appleboy/ssh-action@master
         env:
           RELEASE_DIR: ${{ secrets.RELEASE_DIR }}
-          ARCHIVE_DIR: ${{ secrets.ARCHIVE_DIR }}
         with:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
           port: ${{ secrets.SSH_PORT }}
-          envs: RELEASE_DIR, ARCHIVE_DIR
+          envs: RELEASE_DIR
           script: |
-            # rm -rf "$RELEASE_DIR/*"
-            cd $ARCHIVE_DIR
-            ls
-            tar -C $RELEASE_DIR -xzvf bundle.tar.gz
-            # rm -rf bundle.tar.gz
+            cd $RELEASE_DIR
+            rm -rf public_html/&
+            tar -C public_html/ -xzvf bundle.tar.gz
+            rm -rf bundle.tar.gz
