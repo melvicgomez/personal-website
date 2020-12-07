@@ -71,5 +71,5 @@ jobs:
           envs: RELEASE_DIR,ARCHIVE_DEST
           script: |
                 rm -rf $RELEASE_DIR/*
-                tar -C $RELEASE_DIR/ -xzvf $RELEASE_DIR/bundle.tar.gz
+                tar -C $RELEASE_DIR/ -xzvf $FTP_ARCHIVE_DEST/bundle.tar.gz
                 rm -rf $RELEASE_DIR/bundle.tar.gz
