@@ -72,4 +72,4 @@ jobs:
           script: |
                 rm -rf $RELEASE_DIR/*
                 tar -C $RELEASE_DIR/ -xzvf $FTP_ARCHIVE_DEST/bundle.tar.gz
-                rm -rf $RELEASE_DIR/bundle.tar.gz
+                rm -rf $FTP_ARCHIVE_DEST/bundle.tar.gz
