@@ -8,7 +8,7 @@ on:
 
 jobs:
   build: # set depends on what you need
-    name: Build   
+    name: Build
     runs-on: ubuntu-latest
 
     steps:
@@ -50,13 +50,13 @@ jobs:
 
       - name: Upload bundle tar file in Hostinger using FTP
         env:
-            FTP_ARCHIVE_DEST: 
+          FTP_ARCHIVE_DEST:
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           server: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
-          server-dir:  ${{ secrets.FTP_ARCHIVE_DEST }}
+          server-dir: ${{ secrets.FTP_ARCHIVE_DEST }}
 
       - name: Extract and copy files in public_html directory using ssh
         uses: appleboy/ssh-action@master
@@ -70,6 +70,7 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           envs: RELEASE_DIR,SSH_ARCHIVE_DIR
           script: |
-                rm -rf $RELEASE_DIR/*
-                tar -C $RELEASE_DIR/ -xzvf $SSH_ARCHIVE_DIR/bundle.tar.gz
-                rm -rf $SSH_ARCHIVE_DIR/bundle.tar.gz
+            rm -rf $RELEASE_DIR/*
+            cd $SSH_ARCHIVE_DIR/
+            tar -C $RELEASE_DIR/ -xzvf bundle.tar.gz
+            rm -rf bundle.tar.gz
