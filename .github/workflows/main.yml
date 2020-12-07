@@ -66,7 +66,6 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
           port: ${{ secrets.SSH_PORT }}
-          envs: RELEASE_DIR,ARCHIVE_DIR
           script: |
             # rm -rf "$RELEASE_DIR/*"
             cd "$ARCHIVE_DIR/"
