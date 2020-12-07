@@ -72,7 +72,7 @@ jobs:
           script: |
             echo "I am $RELEASE_DIR"
             echo "I am $ARCHIVE_DIR"
-            rm -rf $RELEASE_DIR/*
-            cd $ARCHIVE_DIR/
-            tar -C $RELEASE_DIR/ -xzvf bundle.tar.gz
+            rm -rf "$RELEASE_DIR/*"
+            cd "$ARCHIVE_DIR/"
+            tar -C "$RELEASE_DIR/" -xzvf bundle.tar.gz
             rm -rf bundle.tar.gz
