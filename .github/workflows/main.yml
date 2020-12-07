@@ -8,7 +8,7 @@ on:
 
 jobs:
   build: # set depends on what you need
-    name: Build and Artifact
+    name: Build   
     runs-on: ubuntu-latest
 
     steps:
@@ -47,5 +47,12 @@ jobs:
         with:
           name: bundle-tar
 
-      - name: Check bundle tar info
-        run: ls
+      - name: Connect FTP
+        env:
+            FTP_ARCHIVE_DEST: 
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with:
+          server: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          password: ${{ secrets.SERVER_PASSWORD }}
+          server-dir:  ${{ secrets.FTP_ARCHIVE_DEST }}
