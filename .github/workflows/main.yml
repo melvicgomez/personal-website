@@ -35,6 +35,7 @@ jobs:
         with:
           name: bundle-tar
           path: bundle.tar.gz
+          retention-days: 1
 
   deploy: # set depends on what you need
     name: Deploy project
