@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -215,7 +216,7 @@ const ContentComponent = styled.div`
   }
 `;
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Personal Website" />
     <HomePageContainer type="flex" justify="center">
@@ -345,7 +346,7 @@ const IndexPage = () => (
                 <a href="/projects">
                   <div className="stats-wrapper projects">
                     <div>
-                      <div>1</div>
+                      <div>{data.allStrapiProjects.totalCount}</div>
                       <div>Projects</div>
                     </div>
                   </div>
@@ -355,7 +356,7 @@ const IndexPage = () => (
                 <a href="/blogs">
                   <div className="stats-wrapper blogs">
                     <div>
-                      <div>2</div>
+                      <div>{data.allStrapiBlogs.totalCount}</div>
                       <div>Blogs</div>
                     </div>
                   </div>
@@ -365,7 +366,7 @@ const IndexPage = () => (
                 <a href="/designs">
                   <div className="stats-wrapper designs">
                     <div>
-                      <div>0</div>
+                      <div>{data.allStrapiDesigns.totalCount}</div>
                       <div>Designs</div>
                     </div>
                   </div>
@@ -379,4 +380,17 @@ const IndexPage = () => (
   </Layout>
 );
 
+export const query = graphql`
+  {
+    allStrapiBlogs {
+      totalCount
+    }
+    allStrapiDesigns {
+      totalCount
+    }
+    allStrapiProjects {
+      totalCount
+    }
+  }
+`;
 export default IndexPage;
