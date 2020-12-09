@@ -1,24 +1,18 @@
-import React from "react";
-import styled from "styled-components";
-import { graphql } from "gatsby";
+import React from 'react';
+import styled from 'styled-components';
+import { graphql } from 'gatsby';
 
-import Layout from "../components/layout";
-import SEO from "../components/seo";
+import WrapperLayout from '../components/WrapperLayout';
+import SEO from '../components/SEO';
 
-import { Row, Col, Avatar, Icon, Divider } from "antd";
+import { Row, Col, Avatar, Icon, Divider } from 'antd';
 
-import projectIcon from "../images/project.png";
-import blogIcon from "../images/social-media.png";
-import uxIcon from "../images/ux.png";
+import projectIcon from '../images/project.png';
+import blogIcon from '../images/social-media.png';
+import uxIcon from '../images/ux.png';
 
 const HomePageContainer = styled(Row)`
   min-height: 100vh;
-  background: rgb(255, 255, 255);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(240, 240, 245, 1) 100%
-  );
 
   .row-wrapper {
     margin-bottom: 24px;
@@ -32,7 +26,7 @@ const HomePageContainer = styled(Row)`
   ::after {
     position: absolute;
     height: 200px;
-    content: "";
+    content: '';
     width: 100%;
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
     z-index: 0;
@@ -200,7 +194,7 @@ const ContentComponent = styled.div`
 
   span.my-name {
     font-weight: 900;
-    font-family: "Sen", sans-serif;
+    font-family: 'Sen', sans-serif;
     background-color: ${props => props.theme.primaryColor};
     color: white;
     padding: 0px 4px;
@@ -217,9 +211,9 @@ const ContentComponent = styled.div`
 `;
 
 const IndexPage = ({ data }) => (
-  <Layout>
+  <WrapperLayout>
     <SEO title="Personal Website" />
-    <HomePageContainer type="flex" justify="center">
+    <HomePageContainer className="body-gradient" type="flex" justify="center">
       <Col
         xs={{ span: 22 }}
         sm={{ span: 22 }}
@@ -231,7 +225,7 @@ const IndexPage = ({ data }) => (
         <div>
           <AvatarImage
             alt="Melvic Gomez Profile Photo"
-            src={require("../images/melvic-profile-image.jpg")}
+            src={require('../images/melvic-profile-image.jpg')}
             shape="circle"
             size={200}
           />
@@ -241,15 +235,15 @@ const IndexPage = ({ data }) => (
           <div className="row-wrapper">
             <div className="section-header">Melvic Gomez</div>
             <p>
-              Hello! I am a{" "}
-              <span className="highlight">full stack developer</span> and{" "}
+              Hello! I am a{' '}
+              <span className="highlight">full stack developer</span> and{' '}
               <span className="highlight">UI designer</span> enthusiast based in
               the Philippines with almost 5 years of experience on creating
               software application (mobile and web) and websites.
             </p>
             <p>
-              I like spending my free times <b>reading books</b>,{" "}
-              <b>listening to podcast</b>, <b>drinking coffee</b> or{" "}
+              I like spending my free times <b>reading books</b>,{' '}
+              <b>listening to podcast</b>, <b>drinking coffee</b> or{' '}
               <b>playing computer games</b>.
             </p>
 
@@ -377,7 +371,7 @@ const IndexPage = ({ data }) => (
         </ContentComponent>
       </Col>
     </HomePageContainer>
-  </Layout>
+  </WrapperLayout>
 );
 
 export const query = graphql`

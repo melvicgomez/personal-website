@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "../components/layout";
+import WrapperLayout from "../components/WrapperLayout";
 import styled from "styled-components";
 import { Button, Icon, Row, Col } from "antd";
 
@@ -16,7 +16,7 @@ const StyledNotFoundPage = styled.div`
 
 function NotFoundPage() {
   return (
-    <Layout>
+    <WrapperLayout>
       <StyledNotFoundPage>
         <Row type="flex" justify="center" align="middle">
           <Col
@@ -34,7 +34,8 @@ function NotFoundPage() {
             <br />
             <div style={{ textAlign: "center" }}>
               <p>
-              oops... this page is currently under construction. Go back after a while and expect something new.
+                oops... this page is currently under construction. Go back after
+                a while and expect something new.
               </p>
               <Button type="link" href="/">
                 <Icon type="arrow-left" />
@@ -44,7 +45,7 @@ function NotFoundPage() {
           </Col>
         </Row>
       </StyledNotFoundPage>
-    </Layout>
+    </WrapperLayout>
   );
 }
 
