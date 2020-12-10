@@ -9,7 +9,7 @@ import PageHeroHeader from '../components/PageHeroHeader';
 
 import { withSize } from 'react-sizeme';
 import ProjectCardComponent from '../components/ProjectCardComponent';
-import SEO from '../components/SEO';
+import Seo from '../components/Seo';
 
 const PageWrapper = styled.div`
   overflow: hidden;
@@ -44,7 +44,7 @@ const PageWrapper = styled.div`
 function ProjectsPageComponent({ size, data }) {
   return (
     <WrapperLayout>
-      <SEO
+      <Seo
         title="Projects"
         description={`Collection of projects I have done in the past, projects I
                 developed involved with my previous and current employers are
