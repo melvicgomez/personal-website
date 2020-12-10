@@ -1,6 +1,6 @@
-import { Divider, Icon } from 'antd';
 import React from 'react';
 import styled from 'styled-components';
+import { Divider, Icon, Carousel } from 'antd';
 
 const CardWrapper = styled.div`
   position: relative;
@@ -11,6 +11,8 @@ const CardWrapper = styled.div`
   .card-cover {
     width: 100%;
     margin-bottom: 0px;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   }
 
   .card-content {
@@ -20,10 +22,42 @@ const CardWrapper = styled.div`
   .repo-link {
     position: absolute;
     z-index: 1;
-    padding: 10px 12px;
     font-size: 28px;
     right: 0px;
     top: 0px;
+
+    min-width: 40px;
+    min-height: 40px;
+    background: #0000004d;
+    text-align: center;
+  }
+  .card-title {
+    a {
+      font-family: 'Sen', sans-serif;
+    }
+  }
+
+  .card-date {
+    opacity: 80%;
+    font-size: 80%;
+  }
+
+  .card-title,
+  .card-date {
+    margin-bottom: 0px;
+  }
+
+  .card-description {
+    margin: 6px 0px;
+  }
+
+  .card-info {
+    h4 {
+      margin-bottom: 0px;
+    }
+    p {
+      font-size: 90%;
+    }
   }
 `;
 
@@ -32,7 +66,7 @@ function ProjectCardComponent({ data }) {
     <CardWrapper>
       <div>
         <div className="repo-link">
-          <a href="">
+          <a href={data.repository_link}>
             <Icon type="github" />
           </a>
         </div>
@@ -45,27 +79,31 @@ function ProjectCardComponent({ data }) {
                 alt={data.project_name}
               />
             ) : (
-              <div>carousel</div>
+              <Carousel effect="fade">
+                {data.thumbnail.map(thumbnail => (
+                  <div>
+                    <img
+                      src={thumbnail.formats.small.url}
+                      alt={data.project_name}
+                    />
+                  </div>
+                ))}
+              </Carousel>
             )
           ) : null
         ) : null}
 
         <div className="card-content">
-          <h3>{data.project_name}</h3>
-          <div>{data.posted_date}</div>
-          <p>{data.description}</p>
-          <Divider />
+          <h2 className="card-title">
+            <a href={data.repository_link}>{data.project_name}</a>
+          </h2>
+          <p className="card-date">{data.posted_date}</p>
+
+          <p className="card-description">{data.description}</p>
+          <Divider style={{ marginTop: 10, marginBottom: 10 }} />
           <div className="card-info">
-            <p>TECH STACK</p>
-            <p>
-              {data.tech_stack}
-              <span>·</span>NodeJs<span>·</span>ReactJs<span>·</span>
-              React&nbsp;Native
-            </p>
-          </div>
-          <Divider />
-          <div className="card-footer">
-            <div>Check the link here{data.url_link}</div>
+            <h4>TECH STACK</h4>
+            <p>{data.tech_stack.split(',').join(`  ·  `)}</p>
           </div>
         </div>
       </div>

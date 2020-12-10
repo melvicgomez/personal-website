@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { graphql } from 'gatsby';
 
-import { Row, Col, Icon } from 'antd';
+import { Row, Col, Icon, Button } from 'antd';
 import StackGrid from 'react-stack-grid';
 import WrapperLayout from '../components/WrapperLayout';
 import PageHeroHeader from '../components/PageHeroHeader';
@@ -20,12 +20,23 @@ const PageWrapper = styled.div`
     max-width: 64px;
     margin-bottom: 0px;
   }
-  p {
-    margin-bottom: 0px;
-  }
 
   .section-wrapper {
     margin: 24px 0px;
+  }
+
+  .nav-btn {
+    display: flex;
+    flex-wrap: wrap;
+    a {
+      color: white;
+      :hover {
+        color: ${props => props.theme.lightprimrayColor};
+      }
+    }
+    a:first-child {
+      margin-right: 12px;
+    }
   }
 `;
 
@@ -60,6 +71,14 @@ function ProjectsPageComponent({ size, data }) {
                 check the projects source codes if you saw the{' '}
                 <Icon type="github" theme="outlined" /> icon in the description.
               </p>
+              <div className="nav-btn">
+                <Button type="ghost" href="/blogs">
+                  BLOGS
+                </Button>
+                <Button type="ghost" href="/designs">
+                  DESIGNS
+                </Button>
+              </div>
             </Col>
           </Row>
         </PageHeroHeader>

@@ -273,14 +273,6 @@ const IndexPage = ({ data }) => (
                 >
                   <Icon type="facebook" theme="outlined" />
                 </a>
-                <a
-                  className="btn-socials"
-                  href="https://www.instagram.com/melvicgomez"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Icon type="instagram" theme="outlined" />
-                </a>
               </Col>
             </Row>
           </div>
