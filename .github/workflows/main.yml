@@ -27,6 +27,7 @@ jobs:
           echo "$CMS_API_URL" >> .env
           echo "$CMS_IDENTIFIER" >> .env
           echo "$CMS_PASSWORD" >> .env
+          ls
 
       - name: Install dependencies and build project
         run: |
