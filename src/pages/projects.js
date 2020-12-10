@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import { graphql } from 'gatsby';
+import { withSize } from 'react-sizeme';
 
 import { Row, Col, Icon, Button } from 'antd';
 import StackGrid from 'react-stack-grid';
 import WrapperLayout from '../components/WrapperLayout';
 import PageHeroHeader from '../components/PageHeroHeader';
 
-import { withSize } from 'react-sizeme';
 import ProjectCardComponent from '../components/ProjectCardComponent';
 import Seo from '../components/Seo';
 
