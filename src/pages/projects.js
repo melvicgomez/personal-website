@@ -9,7 +9,7 @@ import WrapperLayout from '../components/WrapperLayout';
 import PageHeroHeader from '../components/PageHeroHeader';
 
 import ProjectCardComponent from '../components/ProjectCardComponent';
-import Seo from '../components/Seo';
+import SeoComponent from '../components/SeoComponent';
 
 const PageWrapper = styled.div`
   overflow: hidden;
@@ -44,7 +44,7 @@ const PageWrapper = styled.div`
 function ProjectsPageComponent({ size, data }) {
   return (
     <WrapperLayout>
-      <Seo
+      <SeoComponent
         title="Projects"
         description={`Collection of projects I have done in the past, projects I
                 developed involved with my previous and current employers are

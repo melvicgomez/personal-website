@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { graphql } from 'gatsby';
 
 import WrapperLayout from '../components/WrapperLayout';
-import Seo from '../components/Seo';
+import SeoComponent from '../components/SeoComponent';
 
 import { Row, Col, Avatar, Icon, Divider } from 'antd';
 
@@ -212,7 +212,7 @@ const ContentComponent = styled.div`
 
 const IndexPage = ({ data }) => (
   <WrapperLayout>
-    <Seo
+    <SeoComponent
       title="Personal Website"
       description={`Hello! I am a full stack developer and UI designer enthusiast based in the Philippines with almost 5 years of experience on creating software application (mobile and web) and websites.`}
     />
