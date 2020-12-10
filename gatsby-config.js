@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env`,
+});
+
 module.exports = {
   siteMetadata: {
     title: `Melvic Gomez`,
@@ -25,7 +29,7 @@ module.exports = {
         background_color: `#AD2A1A`,
         theme_color: `#AD2A1A`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/mg-icon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-sitemap`,
@@ -70,7 +74,6 @@ module.exports = {
         respectDNT: true,
         exclude: [],
         pageTransitionDelay: 0,
-        containerId: "GTM-WG325XN",
         sampleRate: 5,
         siteSpeedSampleRate: 10,
         cookieDomain: "www.melvicgomez.com",
@@ -82,6 +85,18 @@ module.exports = {
         policy: [{ userAgent: "*", allow: "/", disallow: "/404" }],
       },
     },
+    {
+      resolve: `gatsby-source-strapi`,
+      options: {
+        apiURL: process.env.CMS_API_URL,
+        queryLimit: 1000, // Default to 100
+        contentTypes: [`blogs`,`projects`,`designs`],
+        loginData: {
+          identifier: process.env.CMS_IDENTIFIER,
+          password: process.env.CMS_PASSWORD,
+        },
+      },
+    },
     // `gatsby-plugin-offline`,
   ],
-}
+};

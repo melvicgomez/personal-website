@@ -9,6 +9,7 @@
     "@babel/helper-compilation-targets": "^7.10.2",
     "antd": "^3.26.11",
     "babel-plugin-styled-components": "^1.10.7",
+    "dotenv": "^8.2.0",
     "gatsby": "^2.19.7",
     "gatsby-image": "^2.2.39",
     "gatsby-plugin-antd": "^2.1.0",
@@ -24,12 +25,15 @@
     "gatsby-plugin-styled-components": "^3.1.19",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^2.1.46",
+    "gatsby-source-strapi": "0.0.12",
     "gatsby-transformer-sharp": "^2.3.13",
     "less": "^3.11.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
+    "react-sizeme": "^2.6.12",
+    "react-stack-grid": "^0.7.1",
     "styled-components": "^5.0.1"
   },
   "devDependencies": {

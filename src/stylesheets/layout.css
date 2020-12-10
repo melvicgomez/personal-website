@@ -1,6 +1,6 @@
 body,
 * {
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
 }
 
 h1,
@@ -9,12 +9,12 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Sen", sans-serif;
+  font-family: 'Sen', sans-serif;
   font-weight: bold;
 }
 
 .section-header {
-  font-family: "Sen", sans-serif;
+  font-family: 'Sen', sans-serif;
   font-weight: 700;
   font-size: 1.3em;
   color: #000000dd;
@@ -24,4 +24,13 @@ h6 {
   display: flex;
   justify-content: flex-end;
   margin: 25px 0px 10px 0px;
+}
+
+.body-gradient {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(240, 240, 245, 1) 100%
+  );
 }
