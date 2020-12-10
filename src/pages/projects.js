@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { graphql } from 'gatsby';
 
-import SEO from '../components/SEO';
 import { Row, Col, Icon, Button } from 'antd';
 import StackGrid from 'react-stack-grid';
 import WrapperLayout from '../components/WrapperLayout';
@@ -10,6 +9,7 @@ import PageHeroHeader from '../components/PageHeroHeader';
 
 import { withSize } from 'react-sizeme';
 import ProjectCardComponent from '../components/ProjectCardComponent';
+import SEO from '../components/SEO';
 
 const PageWrapper = styled.div`
   overflow: hidden;
