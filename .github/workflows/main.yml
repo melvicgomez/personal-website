@@ -30,6 +30,7 @@ jobs:
 
       - name: Install dependencies and build project
         run: |
+          ls
           npm ci
           npm run build
 
