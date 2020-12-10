@@ -212,7 +212,10 @@ const ContentComponent = styled.div`
 
 const IndexPage = ({ data }) => (
   <WrapperLayout>
-    <SEO title="Personal Website" />
+    <SEO
+      title="Personal Website"
+      description={`Hello! I am a full stack developer and UI designer enthusiast based in the Philippines with almost 5 years of experience on creating software application (mobile and web) and websites.`}
+    />
     <HomePageContainer className="body-gradient" type="flex" justify="center">
       <Col
         xs={{ span: 22 }}

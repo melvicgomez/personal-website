@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { graphql } from 'gatsby';
 
+import SEO from '../components/SEO';
 import { Row, Col, Icon, Button } from 'antd';
 import StackGrid from 'react-stack-grid';
 import WrapperLayout from '../components/WrapperLayout';
@@ -43,6 +44,13 @@ const PageWrapper = styled.div`
 function ProjectsPageComponent({ size, data }) {
   return (
     <WrapperLayout>
+      <SEO
+        title="Projects"
+        description={`Collection of projects I have done in the past, projects I
+                developed involved with my previous and current employers are
+                not included.`}
+      />
+
       <PageWrapper className="body-gradient">
         <PageHeroHeader
           className="header"
@@ -57,11 +65,13 @@ function ProjectsPageComponent({ size, data }) {
               xl={{ span: 16 }}
               xxl={{ span: 16 }}
             >
-              <img
-                className="logo"
-                src={require('../images/mg-icon-alt.png')}
-                alt="Website Icon"
-              />
+              <a href="/">
+                <img
+                  className="logo"
+                  src={require('../images/mg-icon-alt.png')}
+                  alt="Website Icon"
+                />
+              </a>
               <h1>Personal Projects</h1>
               <p>
                 Collection of projects I have done in the past, projects I
