@@ -30,7 +30,7 @@ jobs:
 
       - name: Install dependencies and build project
         run: |
-          npm ci
+          npm i
           npm run build
 
       - name: Create zip file of public directory
