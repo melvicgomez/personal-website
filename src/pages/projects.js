@@ -12,6 +12,8 @@ import ProjectCardComponent from '../components/ProjectCardComponent';
 import SeoComponent from '../components/SeoComponent';
 
 const PageWrapper = styled.div`
+  width: 100%;
+
   overflow: hidden;
   .header > p,
   h1 {

@@ -19,7 +19,7 @@ const Wrapper = styled.div`
     width: 100%;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.6);
     z-index: 0;
   }
   > div {
@@ -30,11 +30,7 @@ const Wrapper = styled.div`
 `;
 
 function PageHeroHeader({ bgImg, children }) {
-  return (
-    <Wrapper bgImg={bgImg}>
-      <div>{children}</div>
-    </Wrapper>
-  );
+  return <Wrapper bgImg={bgImg}>{children}</Wrapper>;
 }
 
 export default PageHeroHeader;
