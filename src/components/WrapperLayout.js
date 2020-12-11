@@ -32,11 +32,6 @@ const AppContainer = styled.div`
 `;
 
 const WrapperLayout = ({ children }) => {
-  console.log(
-    '%cHello! Checking on something?\nFeel free to send a message directly. 🙋‍♂️',
-    `background: ${theme.primaryColor}; color: white; font-size:1.5em; padding: 6px;`
-  );
-
   return (
     <ThemeProvider theme={theme}>
       <AppContainer>

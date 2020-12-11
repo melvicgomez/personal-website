@@ -23,7 +23,7 @@ const PageWrapper = styled.div`
   }
 
   .section-wrapper {
-    margin: 24px 0px;
+    padding: 24px 0px;
   }
 
   .nav-btn {
@@ -156,4 +156,4 @@ export const query = graphql`
   }
 `;
 
-export default withSize()(ProjectsPageComponent);
+export default withSize({ monitorPosition: true })(ProjectsPageComponent);
