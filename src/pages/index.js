@@ -14,6 +14,7 @@ import uxIcon from '../images/ux.png';
 const HomePageContainer = styled(Row)`
   min-height: 100vh;
 
+  width: 100%;
   .row-wrapper {
     margin-bottom: 24px;
   }
