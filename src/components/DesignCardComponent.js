@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Divider, Icon, Carousel } from 'antd';
+import { Icon, Carousel } from 'antd';
 
 const CardWrapper = styled.div`
   position: relative;
@@ -20,7 +20,7 @@ const CardWrapper = styled.div`
   }
 
   .card-title {
-    a {
+    > a {
       font-family: 'Sen', sans-serif;
     }
   }

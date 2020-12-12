@@ -9,7 +9,7 @@ import WrapperLayout from '../components/WrapperLayout';
 import PageHeroHeader from '../components/PageHeroHeader';
 
 import SeoComponent from '../components/SeoComponent';
-import DesignCardComponent from '../components/DesignsCardComponents';
+import DesignCardComponent from '../components/DesignCardComponent';
 
 const PageWrapper = styled.div`
   width: 100%;
@@ -34,7 +34,7 @@ const PageWrapper = styled.div`
     a {
       color: white;
       :hover {
-        color: ${props => props.theme.lightprimrayColor};
+        color: ${props => props.theme.lightPrimaryColor};
       }
     }
     a:first-child {

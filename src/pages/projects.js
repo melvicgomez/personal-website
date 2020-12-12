@@ -34,7 +34,7 @@ const PageWrapper = styled.div`
     a {
       color: white;
       :hover {
-        color: ${props => props.theme.lightprimrayColor};
+        color: ${props => props.theme.lightPrimaryColor};
       }
     }
     a:first-child {

@@ -8,7 +8,7 @@ import '../stylesheets/layout.css';
 
 // theme will be acccessible on the styled components props
 const theme = {
-  lightprimrayColor: '#D93621',
+  lightPrimaryColor: '#D93621',
   primaryColor: '#C02F1D',
   darkPrimaryColor: '#AD2A1A',
   accentColor: '',
