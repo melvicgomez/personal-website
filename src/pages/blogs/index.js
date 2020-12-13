@@ -5,11 +5,14 @@ import { withSize } from 'react-sizeme';
 
 import { Row, Col, Button } from 'antd';
 import StackGrid from 'react-stack-grid';
-import WrapperLayout from '../components/WrapperLayout';
-import PageHeroHeader from '../components/PageHeroHeader';
+import WrapperLayout from '../../components/WrapperLayout';
+import PageHeroHeader from '../../components/PageHeroHeader';
 
-import BlogCardComponent from '../components/BlogCardComponent';
-import SeoComponent from '../components/SeoComponent';
+import BlogCardComponent from '../../components/BlogCardComponent';
+import SeoComponent from '../../components/SeoComponent';
+
+import qs from 'query-string';
+import NoResultFoundComponent from '../../components/NoResultFoundComponent';
 
 const PageWrapper = styled.div`
   width: 100%;
@@ -43,20 +46,28 @@ const PageWrapper = styled.div`
   }
 `;
 
-function ProjectsPageComponent({ size, data }) {
+function ProjectsPageComponent({ size, data, location }) {
+  const urlParams = qs.parse(location.search).filter
+    ? qs.parse(location.search).filter
+    : '';
+
+  const blogFiltered = data.allStrapiBlogs.nodes.filter(node =>
+    node.tags.toLowerCase().includes(urlParams.toLowerCase())
+  );
+
   return (
     <WrapperLayout>
       <SeoComponent
-        title="Projects"
-        description={`Collection of projects I have done in the past, projects I
-                developed involved with my previous and current employers are
-                not included.`}
+        title="Blogs"
+        description={`Writing my own blogs helps me construct my own
+                thoughts specially when I'm sharing my ideas with other people
+                in a group set-up.`}
       />
 
       <PageWrapper className="body-gradient">
         <PageHeroHeader
           className="header"
-          bgImg={require('../images/bgcover-project-min.jpg')}
+          bgImg={require('../../images/bgcover-project-min.jpg')}
         >
           <Row type="flex" justify="center" align="middle">
             <Col
@@ -70,7 +81,7 @@ function ProjectsPageComponent({ size, data }) {
               <a href="/">
                 <img
                   className="logo"
-                  src={require('../images/mg-icon-alt.png')}
+                  src={require('../../images/mg-icon-alt.png')}
                   alt="Website Icon"
                 />
               </a>
@@ -109,16 +120,23 @@ function ProjectsPageComponent({ size, data }) {
             >
               <BlogCardComponent data={data.strapiBlogs} />
               <br />
-              <StackGrid
-                columnWidth={size.width <= 550 ? '100%' : '50%'}
-                gutterWidth={24}
-                gutterHeight={24}
-                monitorImagesLoaded={true}
-              >
-                {data.allStrapiBlogs.nodes.map((node, i) => (
-                  <BlogCardComponent key={`${node.strapiId}${i}`} data={node} />
-                ))}
-              </StackGrid>
+              {blogFiltered.length > 0 ? (
+                <StackGrid
+                  columnWidth={size.width <= 550 ? '100%' : '50%'}
+                  gutterWidth={24}
+                  gutterHeight={24}
+                  monitorImagesLoaded={true}
+                >
+                  {blogFiltered.map((node, i) => (
+                    <BlogCardComponent
+                      key={`${node.strapiId}${i}`}
+                      data={node}
+                    />
+                  ))}
+                </StackGrid>
+              ) : (
+                <NoResultFoundComponent />
+              )}
             </Col>
           </Row>
         </div>
@@ -129,7 +147,7 @@ function ProjectsPageComponent({ size, data }) {
 
 export const query = graphql`
   {
-    allStrapiBlogs(filter: { featured: { ne: true } }) {
+    allStrapiBlogs(filter: { featured: { eq: false } }) {
       nodes {
         author
         content

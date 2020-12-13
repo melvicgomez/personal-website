@@ -62,8 +62,8 @@ function DesignCardComponent({ data }) {
               />
             ) : (
               <Carousel effect="fade">
-                {data.images.map(image => (
-                  <div>
+                {data.images.map((image, i) => (
+                  <div key={`${data.design_name}-${i}`}>
                     <img src={image.formats.small.url} alt={data.design_name} />
                   </div>
                 ))}
