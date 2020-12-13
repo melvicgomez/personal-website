@@ -80,8 +80,8 @@ function ProjectCardComponent({ data }) {
               />
             ) : (
               <Carousel effect="fade">
-                {data.thumbnail.map(thumbnail => (
-                  <div>
+                {data.thumbnail.map((thumbnail, i) => (
+                  <div key={`${data.project_name}-${i}`}>
                     <img
                       src={thumbnail.formats.small.url}
                       alt={data.project_name}

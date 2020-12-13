@@ -26,6 +26,8 @@ const Wrapper = styled.div`
     position: relative;
     z-index: 1;
     color: white;
+
+    flex: 1;
   }
 `;
 
