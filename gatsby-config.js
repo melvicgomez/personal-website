@@ -70,13 +70,10 @@ module.exports = {
       options: {
         trackingId: "UA-114667360-1",
         head: true,
-        anonymize: true,
-        respectDNT: true,
-        exclude: [],
-        pageTransitionDelay: 0,
+        exclude: ["/404"],
         sampleRate: 5,
         siteSpeedSampleRate: 10,
-        cookieDomain: "www.melvicgomez.com",
+        cookieDomain: "melvicgomez.com",
       },
     },
     {
