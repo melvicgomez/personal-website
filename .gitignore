@@ -1,3 +1,4 @@
+
 # Logs
 logs
 *.log
@@ -57,6 +58,7 @@ typings/
 # gatsby files
 .cache/
 public
+_v1/
 
 # Mac files
 .DS_Store
