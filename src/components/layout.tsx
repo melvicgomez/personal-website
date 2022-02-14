@@ -1,17 +1,15 @@
-import * as React from "react"
-
-import "./layout.css"
+import * as React from 'react';
 
 type Props = {
-  children?: React.ReactNode
-}
+  children?: React.ReactNode;
+};
 
 const Layout: React.FC<Props> = ({ children }) => {
   return (
     <div className="page-wrapper">
       <main>{children}</main>
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

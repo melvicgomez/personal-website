@@ -1,11 +1,11 @@
-import * as React from "react"
-import { PageProps } from "gatsby"
+import * as React from 'react';
+import { PageProps } from 'gatsby';
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-import PageLoadingScreen from "../components/PageLoadingScreen"
+import Layout from '../components/layout';
+import Seo from '../components/seo';
+import PageLoadingScreen from '../components/PageLoadingScreen/PageLoadingScreen';
 
-type Props = { children: React.ReactNode }
+type Props = { children: React.ReactNode };
 
 const IndexPage: React.FC<PageProps<Props>> = () => (
   <Layout>
@@ -13,6 +13,6 @@ const IndexPage: React.FC<PageProps<Props>> = () => (
     <div>index page</div>
     <PageLoadingScreen />
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;
