@@ -57,7 +57,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Sen:500,700,800,900', 'DM Sans'],
+          families: ['DM Sans'],
         },
       },
     },
