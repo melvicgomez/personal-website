@@ -2,16 +2,15 @@ import * as React from 'react';
 import { PageProps } from 'gatsby';
 
 import Layout from '../components/layout';
-import Seo from '../components/seo';
-import PageLoadingScreen from '../components/PageLoadingScreen/PageLoadingScreen';
+import Footer from '../components/Footer/Footer';
+import HeroSection from '../components/HeroSection/HeroSection';
 
 type Props = { children: React.ReactNode };
 
 const IndexPage: React.FC<PageProps<Props>> = () => (
-  <Layout>
-    <Seo title="Home" />
-    <div>index page</div>
-    <PageLoadingScreen />
+  <Layout showMenuBar={false}>
+    <HeroSection />
+    <Footer />
   </Layout>
 );
 
