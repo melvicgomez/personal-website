@@ -162,7 +162,7 @@ const features = [
 
 const SkillCompetencies: React.FC = () => (
   <StyledWrapper>
-    <div className="mt-6 grid grid-cols-2 px-4 md:px-16 lg:px-32 py-4 md:py-20 bg-gray-100 lg:grid-cols-5">
+    <div className="grid grid-cols-2 px-4 md:px-16 lg:px-32 py-4 md:py-20 bg-gray-100 lg:grid-cols-5">
       <div className="col-span-2">
         <p className="text-2xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
           Skill Competencies
