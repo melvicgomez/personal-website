@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import AppLogo from '../../images/mg-icon-alt.png';
+import MelvicImage from '../../images/melvic-image.jpg';
 import ScrollIndicator from '../../molecules/ScrollIndicator/ScrollIndicator';
 
 const HeroSection: React.FC = () => (
@@ -52,8 +53,8 @@ const HeroSection: React.FC = () => (
       </div>
       <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
         <img
-          className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-          src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
+          className="w-full object-cover lg:w-full h-full"
+          src={MelvicImage}
           alt=""
         />
       </div>
