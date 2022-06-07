@@ -18,15 +18,19 @@ type Props = {
 const IndexPage: React.FC<PageProps<Props>> = ({ data }) => (
   <Layout showMenuBar={false}>
     <HeroSection />
-    <SkillCompetencies />
-    <RecentWorkSection projects={data.allContentfulProject.nodes || []} />
+    <SkillCompetencies id="skills-and-stats" />
+    <RecentWorkSection
+      id="project-portfolio"
+      projects={data.allContentfulProject.nodes || []}
+    />
+    <hr className="border-red-700" />
     <BlogsSection blogs={data.allContentfulBlog.nodes || []} />
     <Footer />
   </Layout>
 );
 
 export const query = graphql`
-  query ProjectsQuery {
+  query IndexPageQuery {
     allContentfulProject(sort: { fields: order, order: ASC }) {
       nodes {
         android
@@ -46,8 +50,7 @@ export const query = graphql`
         }
       }
     }
-
-    allContentfulBlog {
+    allContentfulBlog(sort: { fields: publicationDate, order: DESC }) {
       nodes {
         id
         title
@@ -60,7 +63,7 @@ export const query = graphql`
         articleLengthInMinutes {
           articleLengthInMinutes
         }
-        publicationDate(formatString: "MMMM DD, YYYY")
+        publicationDate(formatString: "MMMM D, YYYY")
         # coverImage {
         #   publicUrl
         # }
@@ -71,4 +74,5 @@ export const query = graphql`
     }
   }
 `;
+
 export default IndexPage;

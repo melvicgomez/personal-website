@@ -34,7 +34,7 @@ const HeroSection: React.FC = () => (
               <h2 className="text-5xl tracking-tighter font-extrabold text-white dev-role md:mb-3 sm:mb-5">
                 Full Stack Developer
               </h2>
-              <p className="mt-3 text-white sm:mt-5 sm:max-w-xl sm:mx-auto md:mt-5 lg:mx-0 text-xl ">
+              <p className="mt-3 text-white sm:mt-5 sm:max-w-xl sm:mx-auto md:mt-5 lg:mx-0 text-xl leading-relaxed">
                 Mabuhay! I am a full stack developer and UI/UX enthusiast from
                 the Philippines with more than 7 years of experience on creating
                 software application(web and mobile) and websites.

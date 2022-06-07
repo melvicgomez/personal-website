@@ -27,7 +27,7 @@ const ProjectCard: React.FC<Project> = (props: Project) => (
       <img src={props.imageSrc.url} alt={props.projectName} />
     </div>
     <div className="p-4">
-      <p className="text-base text-gray-900 mb-2 leading-1">
+      <p className="text-base text-gray-900 mb-2 leading-snug">
         {props.description.description}
       </p>
       <hr className="border-red-700" />

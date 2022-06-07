@@ -9,8 +9,9 @@ import SocialMedia from '../SocialMedia/SocialMedia';
 import AppLogo from '../../images/mg-icon-alt.png';
 
 const navigation = [
-  { name: 'Projects', href: '#projects' },
-  { name: 'Certificates', href: '/certificates' },
+  { name: 'Skill Competencies', href: '/#skills-and-stats' },
+  { name: 'Current Stats', href: '/#skills-and-stats' },
+  { name: 'Project Portfolio', href: '/#project-portfolio' },
   { name: 'Blogs', href: '/blogs' },
 ];
 
