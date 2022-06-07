@@ -164,7 +164,7 @@ const SkillCompetencies: React.FC = () => (
   <StyledWrapper>
     <div className="grid grid-cols-2 px-4 md:px-16 lg:px-32 py-4 md:py-20 bg-gray-100 lg:grid-cols-5">
       <div className="col-span-2">
-        <p className="text-2xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+        <p className="text-3xl leading-8 font-extrabold tracking-tight text-gray-900">
           Skill Competencies
         </p>
         <p className="mt-4 max-w-2xl text-lg text-gray-500">
@@ -195,8 +195,8 @@ const SkillCompetencies: React.FC = () => (
         </div>
       </div>
       <div className="col-span-2 lg:col-start-4 mt-16 lg:mt-0">
-        <p className="text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl text-center">
-          Tech Stack Stats
+        <p className="text-3xl leading-8 font-extrabold tracking-tight text-gray-900 text-center">
+          Current Stats (2022)
         </p>
         <div className="hidden md:block mt-4">
           <PolarArea redraw data={polarData} />

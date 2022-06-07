@@ -10,7 +10,7 @@ type Props = {
 };
 
 const Layout: React.FC<Props> = ({ children, showMenuBar = true }) => (
-  <StyledLayout className=" bg-zinc-100 h-screen">
+  <StyledLayout className="h-screen">
     <div className="max-w-screen-2xl mx-auto">
       <Seo title="Home" />
       {showMenuBar && <NavigationMenuBar />}

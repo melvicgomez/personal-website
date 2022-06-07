@@ -28,19 +28,19 @@ const HeroSection: React.FC = () => (
                 src={AppLogo}
                 alt="app logo for my website"
               />
-              <h1 className="lg:text-5xl tracking-tight font-extrabold text-white text-3xl md:text-3xl dev-name">
+              <h1 className="text-5xl tracking-tight font-extrabold text-white dev-name">
                 Melvic Gomez
               </h1>
-              <h2 className="lg:text-5xl tracking-tighter font-extrabold text-white text-3xl md:text-3xl dev-role md:mb-3 sm:mb-5">
+              <h2 className="text-5xl tracking-tighter font-extrabold text-white dev-role md:mb-3 sm:mb-5">
                 Full Stack Developer
               </h2>
-              <p className="mt-3 text-base text-white sm:mt-5 sm:max-w-xl sm:mx-auto md:mt-5 lg:mx-0 md:text-lg sm:text-base">
+              <p className="mt-3 text-white sm:mt-5 sm:max-w-xl sm:mx-auto md:mt-5 lg:mx-0 text-xl ">
                 Mabuhay! I am a full stack developer and UI/UX enthusiast from
                 the Philippines with more than 7 years of experience on creating
                 software application(web and mobile) and websites.
               </p>
 
-              <p className="mt-3 text-base text-white sm:mt-5 sm:max-w-xl sm:mx-auto md:mt-5 lg:mx-0 md:text-lg sm:text-base">
+              <p className="mt-3 text-white sm:mt-5 sm:max-w-xl sm:mx-auto md:mt-5 lg:mx-0 text-xl ">
                 I like spending my free times on cycling, reading books,
                 listening to podcasts, drinking coffee, or playing computer
                 games.
