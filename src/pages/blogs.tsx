@@ -47,11 +47,12 @@ export const query = graphql`
           articleLengthInMinutes
         }
         publicationDate(formatString: "MMMM D, YYYY")
-        # coverImage {
-        #   publicUrl
-        # }
         content {
           raw
+        }
+        appearance
+        coverImage {
+          publicUrl
         }
       }
     }

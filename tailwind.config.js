@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
@@ -14,5 +15,5 @@ module.exports = {
     },
   },
   variants: {},
-  plugins: [],
+  plugins: [require('@tailwindcss/line-clamp')],
 };

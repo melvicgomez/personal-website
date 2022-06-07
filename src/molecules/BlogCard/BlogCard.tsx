@@ -10,13 +10,16 @@ const BlogCard: React.FC<Blog> = (props: Blog) => (
         {props.category}
       </span>
       <p className="text-2xl font-bold">{props.title}</p>
-      <p className="text-sm italic">{props.publicationDate}</p>
+      <p className="text-sm italic">
+        {props.publicationDate} ·{' '}
+        {props.articleLengthInMinutes.articleLengthInMinutes} min read
+      </p>
     </div>
-    <p className="text-base text-gray-900 mb-4 leading-snug">
+    <p className="text-base text-gray-900 mb-4 leading-snug line-clamp-3">
       {props.description.description}
     </p>
     <a
-      href={props.slug}
+      href={`/blogs/${props.slug}`}
       className="text-red-700 hover:text-red-900 text-right text-base font-bold inline-flex items-center justify-end w-full"
     >
       Read full article <ArrowNarrowRightIcon className="ml-2 w-6 h-6" />
