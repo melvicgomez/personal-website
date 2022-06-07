@@ -139,6 +139,7 @@ import {
   PencilAltIcon,
   UserGroupIcon,
 } from '@heroicons/react/outline';
+import { Props } from '../../types/common';
 
 const features = [
   {
@@ -160,14 +161,14 @@ const features = [
   },
 ];
 
-const SkillCompetencies: React.FC = () => (
+const SkillCompetencies: React.FC<Props> = () => (
   <StyledWrapper>
     <div className="grid grid-cols-2 px-4 md:px-16 lg:px-32 py-4 md:py-20 bg-gray-100 lg:grid-cols-5">
       <div className="col-span-2">
-        <p className="text-3xl leading-8 font-extrabold tracking-tight text-gray-900">
+        <p className="text-4xl leading-8 font-extrabold tracking-tight text-gray-900">
           Skill Competencies
         </p>
-        <p className="mt-4 max-w-2xl text-lg text-gray-500">
+        <p className="mt-4 max-w-2xl text-lg text-gray-700 leading-relaxed">
           On my early career years working hard to developed and enhanced these
           skills by myself. I've been involved in each step of the process from
           <b className="text-gray-900"> start (planning)</b> and{' '}
@@ -186,7 +187,7 @@ const SkillCompetencies: React.FC = () => (
                     {feature.name}
                   </p>
                 </dt>
-                <dd className="ml-16 text-base text-gray-500">
+                <dd className="ml-16 text-base text-gray-500 leading-snug">
                   {feature.description}
                 </dd>
               </div>
@@ -195,7 +196,7 @@ const SkillCompetencies: React.FC = () => (
         </div>
       </div>
       <div className="col-span-2 lg:col-start-4 mt-16 lg:mt-0">
-        <p className="text-3xl leading-8 font-extrabold tracking-tight text-gray-900 text-center">
+        <p className="text-4xl leading-8 font-extrabold tracking-tight text-gray-900 text-center">
           Current Stats (2022)
         </p>
         <div className="hidden md:block mt-4">

@@ -1,4 +1,7 @@
+import { SEOProps } from '../components/layout';
+
 export interface Props {
+  id?: string;
   className?: string;
 }
 
@@ -16,17 +19,17 @@ export interface Project extends Props {
   githubLink?: string;
 }
 
-export interface Blog extends Props {
+export interface Blog extends Props, SEOProps {
   id: string;
   title?: string;
   description?: { description: string };
   category?: string;
   slug?: string;
+  keywords?: string[];
   articleLengthInMinutes?: { articleLengthInMinutes: string };
   publicationDate?: string;
-  coverImage: {
+  coverImage?: {
     url: string;
   };
   content?: { raw: string };
-  keywords?: string[];
 }

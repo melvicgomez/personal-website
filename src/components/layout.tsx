@@ -4,9 +4,24 @@ import Seo from '../components/seo';
 import NavigationMenuBar from '../molecules/NavigationMenuBar/NavigationMenuBar';
 // import PageLoadingScreen from '../components/PageLoadingScreen/PageLoadingScreen';
 
+export interface Meta {
+  name: string;
+  content: string;
+}
+
+export interface SEOProps {
+  meta: {
+    description: string;
+    lang: string;
+    meta: Meta[];
+    title: string;
+  };
+}
+
 type Props = {
   children?: React.ReactNode;
   showMenuBar?: boolean;
+  seo?: SEOProps;
 };
 
 const Layout: React.FC<Props> = ({ children, showMenuBar = true }) => (
