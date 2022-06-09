@@ -21,7 +21,7 @@ const BlogsSection: React.FC<Props> = ({ blogs }) => (
           Recent Blogs
         </p>
         <p className="mt-4 max-w-2xl text-lg text-gray-700 leading-relaxed">
-          Writing these blogs helped my refine all my understanding on tech and
+          Writing these blogs helped me refine all my understanding on tech and
           techniques I learned from the past. Good way to practice my grammar
           too!
         </p>

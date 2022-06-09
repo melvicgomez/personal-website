@@ -1,3 +1,9 @@
+export enum BlogCardType {
+  Small = 'Small',
+  Medium = 'Medium',
+  MediumWithImage = 'Medium without Image',
+}
+
 export enum NodeTypes {
   H1 = 'heading-1',
   H2 = 'heading-2',
@@ -28,4 +34,14 @@ export interface ContentType {
   data: {
     uri: string;
   };
+}
+
+export enum BlogCategories {
+  ALL = 'All',
+  TECHNOLOGY = 'Technology',
+  UI_UX = 'UI/UX',
+  SOFTWARE = 'Software Development',
+  GAMES = 'Games',
+  SELF_IMPROVEMENT = 'Self Improvement',
+  BUSINESS = 'Business',
 }

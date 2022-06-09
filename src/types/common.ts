@@ -1,8 +1,12 @@
 import { SEOProps } from '../components/layout';
+import { BlogCardType } from './contentful';
 
 export interface Props {
   id?: string;
   className?: string;
+  children?: React.ReactNode;
+  showMenuBar?: boolean;
+  seo?: SEOProps;
 }
 
 export interface Project extends Props {
@@ -32,5 +36,6 @@ export interface Blog extends Props, SEOProps {
     url: string;
   };
   content: { raw: string };
-  appearance: string;
+  appearance: BlogCardType;
+  showImage?: boolean;
 }

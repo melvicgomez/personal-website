@@ -16,7 +16,7 @@ type Props = {
 };
 
 const IndexPage: React.FC<PageProps<Props>> = ({ data }) => (
-  <Layout showMenuBar={false}>
+  <Layout showMenuBar={false} className="scroll-smooth">
     <HeroSection />
     <SkillCompetencies id="skills-and-stats" />
     <RecentWorkSection

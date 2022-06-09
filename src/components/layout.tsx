@@ -2,6 +2,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 import Seo from '../components/seo';
 import NavigationMenuBar from '../molecules/NavigationMenuBar/NavigationMenuBar';
+import { Props } from '../types/common';
 // import PageLoadingScreen from '../components/PageLoadingScreen/PageLoadingScreen';
 
 export interface Meta {
@@ -17,12 +18,6 @@ export interface SEOProps {
     title: string;
   };
 }
-
-type Props = {
-  children?: React.ReactNode;
-  showMenuBar?: boolean;
-  seo?: SEOProps;
-};
 
 const Layout: React.FC<Props> = ({ children, showMenuBar = true }) => (
   <StyledLayout className="h-screen">
