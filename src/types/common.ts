@@ -1,5 +1,5 @@
 import { SEOProps } from '../components/layout';
-import { BlogCardType } from './contentful';
+import { BlogCardTypes, BlogCategories } from './contentful';
 
 export interface Props {
   id?: string;
@@ -36,6 +36,21 @@ export interface Blog extends Props, SEOProps {
     url: string;
   };
   content: { raw: string };
-  appearance: BlogCardType;
+  appearance: BlogCardTypes;
   showImage?: boolean;
 }
+
+export const ColorDesignCategory = {
+  [BlogCategories.BUSINESS]:
+    'bg-blue-100 text-blue-800 dark:bg-blue-200 dark:text-blue-800',
+  [BlogCategories.GAMES]:
+    'bg-amber-100 text-amber-800 dark:bg-amber-200 dark:text-amber-800',
+  [BlogCategories.SELF_IMPROVEMENT]:
+    'bg-orange-100 text-orange-800 dark:bg-orange-200 dark:text-orange-800',
+  [BlogCategories.SOFTWARE]:
+    'bg-green-100 text-green-800 dark:bg-green-200 dark:text-green-800',
+  [BlogCategories.TECHNOLOGY]:
+    'bg-cyan-100 text-cyan-800 dark:bg-cyan-200 dark:text-cyan-800',
+  [BlogCategories.UI_UX]:
+    'bg-purple-100 text-purple-800 dark:bg-purple-200 dark:text-purple-800',
+};

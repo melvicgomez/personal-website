@@ -2,18 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 import { Blog } from '../../types/common';
 import { ArrowNarrowRightIcon } from '@heroicons/react/outline';
-import { BlogCardType } from '../../types/contentful';
+import { BlogCardTypes } from '../../types/contentful';
+import CategoryLabel from '../CategoryLabel/CategoryLabel';
 
 const BlogCard: React.FC<Blog> = (props: Blog) => (
   <StyledCardWrapper className={props.className}>
-    {props.appearance === BlogCardType.Medium && props.showImage && (
+    {props.appearance === BlogCardTypes.Medium && props.showImage && (
       <>
-        <img src={props?.coverImage?.url} alt={props.title} />
+        <img src={props?.coverImage?.url} alt={props.title} className="mb-2" />
       </>
     )}
-    <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full dark:bg-blue-200 dark:text-blue-800">
-      {props.category}
-    </span>
+    <CategoryLabel category={props.category} />
     <p className="text-xl font-extrabold">{props.title}</p>
     <p className="text-sm italic">
       {props.publicationDate} ·{' '}
