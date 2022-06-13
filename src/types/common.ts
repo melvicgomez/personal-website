@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { SEOProps } from '../components/layout';
 import { BlogCardTypes, BlogCategories } from './contentful';
 
@@ -7,6 +8,7 @@ export interface Props {
   children?: React.ReactNode;
   showMenuBar?: boolean;
   seo?: SEOProps;
+  location?: any;
 }
 
 export interface Project extends Props {

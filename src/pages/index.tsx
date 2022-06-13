@@ -15,8 +15,8 @@ type Props = {
   allContentfulBlog: { nodes: Blog[] };
 };
 
-const IndexPage: React.FC<PageProps<Props>> = ({ data }) => (
-  <Layout showMenuBar={false} className="scroll-smooth">
+const IndexPage: React.FC<PageProps<Props>> = ({ data, location }) => (
+  <Layout showMenuBar={true} location={location}>
     <HeroSection />
     <SkillCompetencies id="skills-and-stats" />
     <RecentWorkSection

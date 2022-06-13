@@ -62,7 +62,7 @@ const BlogPage: React.FC<Props & PageProps> = ({
   }, [qsParam.filter]);
 
   return (
-    <Layout showMenuBar={showMenuBar}>
+    <Layout showMenuBar={showMenuBar} location={location}>
       <div className="pt-[104px] md:pt-24 bg-gray-100">
         <div className="p-4 md:py-6 md:p-10 lg:px-32">
           <div className="mb-2 text-2xl font-extrabold text-gray-700">

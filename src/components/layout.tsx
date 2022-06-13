@@ -19,16 +19,18 @@ export interface SEOProps {
   };
 }
 
-const Layout: React.FC<Props> = ({ children, showMenuBar = true }) => (
-  <StyledLayout className="h-screen">
-    <div className="max-w-screen-2xl mx-auto">
-      <Seo title="Home" />
-      {showMenuBar && <NavigationMenuBar />}
-      {/* <PageLoadingScreen /> */}
-      {children}
-    </div>
-  </StyledLayout>
-);
+const Layout: React.FC<Props> = ({ children, showMenuBar = true }) => {
+  return (
+    <StyledLayout className="h-screen">
+      <div className="max-w-screen-2xl mx-auto">
+        <Seo title="Home" />
+        {showMenuBar && <NavigationMenuBar />}
+        {/* <PageLoadingScreen /> */}
+        {children}
+      </div>
+    </StyledLayout>
+  );
+};
 
 const StyledLayout = styled.div``;
 export default Layout;

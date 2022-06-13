@@ -32,7 +32,7 @@ const BlogViewPageTemplate: React.FC<PageProps> = ({ pageContext }) => {
           <hr className="my-4 border-red-700" />
           <div className="flex flex-row flex-wrap align-center gap-1">
             <p className="text-lg font-bold text-gray-700">KEYWORDS:</p>
-            {blogData.keywords.sort().map((keyword) => (
+            {(blogData.keywords || [])?.sort().map((keyword) => (
               <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-stone-600 bg-stone-200 uppercase last:mr-0 mr-1">
                 {keyword}
               </span>
