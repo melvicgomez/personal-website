@@ -16,13 +16,10 @@ type Props = {
 };
 
 const IndexPage: React.FC<PageProps<Props>> = ({ data, location }) => (
-  <Layout showMenuBar={true} location={location}>
+  <Layout showMenuBar={false} location={location}>
     <HeroSection />
-    <SkillCompetencies id="skills-and-stats" />
-    <RecentWorkSection
-      id="project-portfolio"
-      projects={data.allContentfulProject.nodes || []}
-    />
+    <SkillCompetencies />
+    <RecentWorkSection projects={data.allContentfulProject.nodes || []} />
     <hr className="border-red-700" />
     <BlogsSection blogs={data.allContentfulBlog.nodes || []} />
     <Footer />

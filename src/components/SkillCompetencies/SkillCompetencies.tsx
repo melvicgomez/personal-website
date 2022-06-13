@@ -162,7 +162,7 @@ const features = [
 ];
 
 const SkillCompetencies: React.FC<Props> = () => (
-  <StyledWrapper>
+  <StyledWrapper id="skills-and-competencies">
     <div className="grid grid-cols-2 px-4 md:px-16 lg:px-32 py-4 md:py-20 bg-gray-100 lg:grid-cols-5">
       <div className="col-span-2">
         <p className="text-4xl leading-8 font-extrabold tracking-tight text-gray-900">

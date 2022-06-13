@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import BlogCard from '../../molecules/BlogCard/BlogCard';
 import { Blog } from '../../types/common';
 import { ArrowNarrowRightIcon } from '@heroicons/react/outline';
+import { Link } from 'gatsby';
 
 type Props = {
   blogs: Blog[];
@@ -25,13 +26,13 @@ const BlogsSection: React.FC<Props> = ({ blogs }) => (
           techniques I learned from the past. Good way to practice my grammar
           too!
         </p>
-        <a
-          href="/blogs"
+        <Link
           className="mt-3 inline-flex items-center py-2 px-4 text-sm font-medium text-center text-white bg-red-700 rounded-md hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
+          to="/blogs"
         >
           Learn more
           <ArrowNarrowRightIcon className="ml-2 w-6 h-6" />
-        </a>
+        </Link>
       </div>
 
       {blogs.slice(0, 2).map((blogProp) => (

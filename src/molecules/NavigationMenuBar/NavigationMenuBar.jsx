@@ -3,22 +3,26 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { Popover, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
-
+import scrollTo from 'gatsby-plugin-smoothscroll';
 import SocialMedia from '../SocialMedia/SocialMedia';
 
 import AppLogo from '../../images/mg-icon-alt.png';
+import { Link, navigate } from 'gatsby';
 
 const navigation = [
   {
     name: 'Skill Competencies',
-    href: '/',
+    to: '/#skills-and-competencies',
   },
-  { name: 'Current Stats', href: '/' },
+  {
+    name: 'Current Stats',
+    to: '/#skills-and-competencies',
+  },
   {
     name: 'Project Portfolio',
-    href: '/',
+    to: '/#project-portfolio',
   },
-  { name: 'Blogs', href: '/blogs' },
+  { name: 'Blogs', to: '/blogs' },
 ];
 
 const NavigationMenuBar = () => (
@@ -41,15 +45,26 @@ const NavigationMenuBar = () => (
               </a>
 
               <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
-                {navigation.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="text-lg px-3 py-2 font-medium text-white hover:text-red-700 hover:bg-amber-400"
-                  >
-                    {item.name}
-                  </a>
-                ))}
+                {navigation.map((item) =>
+                  !item.to.startsWith('#') ? (
+                    <Link
+                      className="text-lg px-3 py-2 font-medium text-white hover:text-red-700 hover:bg-amber-400"
+                      to={item.to}
+                    >
+                      {item.name}
+                    </Link>
+                  ) : (
+                    <button
+                      key={item.name}
+                      className="text-lg px-3 py-2 font-medium text-white hover:text-red-700 hover:bg-amber-400"
+                      onClick={() => {
+                        scrollTo(item.to);
+                      }}
+                    >
+                      {item.name}
+                    </button>
+                  )
+                )}
               </div>
 
               <div className="flex items-center md:hidden">

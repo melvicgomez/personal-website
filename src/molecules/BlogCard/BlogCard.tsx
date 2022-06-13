@@ -4,6 +4,7 @@ import { Blog } from '../../types/common';
 import { ArrowNarrowRightIcon } from '@heroicons/react/outline';
 import { BlogCardTypes } from '../../types/contentful';
 import CategoryLabel from '../CategoryLabel/CategoryLabel';
+import { Link } from 'gatsby';
 
 const BlogCard: React.FC<Blog> = (props: Blog) => (
   <StyledCardWrapper className={props.className}>
@@ -22,12 +23,12 @@ const BlogCard: React.FC<Blog> = (props: Blog) => (
       {props.description.description}
     </p>
     <div className="inline-flex justify-end w-full">
-      <a
-        href={`/blogs/${props.slug}`}
+      <Link
+        to={`/blogs/${props.slug}`}
         className="text-red-700 hover:text-red-900 text-right text-base font-bold inline-flex items-center"
       >
         Read full article <ArrowNarrowRightIcon className="ml-2 w-6 h-6" />
-      </a>
+      </Link>
     </div>
   </StyledCardWrapper>
 );

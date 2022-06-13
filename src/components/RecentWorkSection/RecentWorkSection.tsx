@@ -8,7 +8,7 @@ interface ComponentProps extends Props {
 }
 
 const RecentWorkSection: React.FC<ComponentProps> = ({ projects }) => (
-  <StyledWrapper className="w-full bg-gray-100 pb-24">
+  <StyledWrapper id="project-portfolio" className="w-full bg-gray-100 pb-24">
     <div className="bg-red-700 px-4 md:px-16 lg:px-32 pt-20 pb-48">
       <p className="text-4xl font-extrabold tracking-wide text-white text-center">
         Project Portfolio
