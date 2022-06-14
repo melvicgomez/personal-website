@@ -4,11 +4,30 @@ import * as queryString from 'query-string';
 
 import Layout from '../components/layout';
 import Footer from '../components/Footer/Footer';
-import { Blog } from '../types/common';
+import { Blog, SEOProps } from '../types/common';
 import BlogCard from '../molecules/BlogCard/BlogCard';
 import StackGrid from 'react-stack-grid';
 import sizeMe, { withSize } from 'react-sizeme';
 import { BlogCategories } from '../types/contentful';
+
+const meta: SEOProps = {
+  meta: {
+    title: 'Blogs',
+    description:
+      'Writing these blogs helped me refine all my understanding on tech and techniques I learned from the past. Good way to practice my grammar too!',
+    keywords: [
+      {
+        name: `keywords`,
+        content:
+          'Melvic Gomez, Blogs, Personal Website, Technology, UI/UX, Software Developement, Games, Self Improvement, Business',
+      },
+      {
+        property: `og:type`,
+        content: `website`,
+      },
+    ],
+  },
+};
 
 interface Props {
   showDivider: boolean;
@@ -62,7 +81,7 @@ const BlogPage: React.FC<Props & PageProps> = ({
   }, [qsParam.filter]);
 
   return (
-    <Layout showMenuBar={showMenuBar} location={location}>
+    <Layout showMenuBar={showMenuBar} location={location} seo={meta}>
       <div className="pt-[104px] md:pt-24 bg-gray-100">
         <div className="p-4 md:py-6 md:p-10 lg:px-32">
           <div className="mb-2 text-2xl font-extrabold text-gray-700">

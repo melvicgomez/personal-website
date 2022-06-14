@@ -1,6 +1,20 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { SEOProps } from '../components/layout';
 import { BlogCardTypes, BlogCategories } from './contentful';
+
+export interface Meta {
+  property?: string;
+  name?: string;
+  content: string;
+}
+
+export interface SEOProps {
+  meta: {
+    description: string;
+    lang?: string;
+    keywords: Meta[];
+    title: string;
+  };
+}
 
 export interface Props {
   id?: string;

@@ -7,16 +7,40 @@ import HeroSection from '../components/HeroSection/HeroSection';
 import SkillCompetencies from '../components/SkillCompetencies/SkillCompetencies';
 import RecentWorkSection from '../components/RecentWorkSection/RecentWorkSection';
 import BlogsSection from '../components/BlogsSection/BlogsSection';
-import { Project, Blog } from '../types/common';
+import { Project, Blog, SEOProps } from '../types/common';
+
+import MelvicImage from '../images/melvic-image.jpg';
 
 type Props = {
   children: React.ReactNode;
   allContentfulProject: { nodes: Project[] };
   allContentfulBlog: { nodes: Blog[] };
 };
+const meta: SEOProps = {
+  meta: {
+    title: 'Home',
+    description:
+      'Mabuhay! I am a full stack developer and UI/UX enthusiast from the Philippines with more than 7 years of experience on creating software application(web and mobile) and websites.',
+    keywords: [
+      {
+        name: `keywords`,
+        content:
+          'Melvic Gomez, Personal Website, Technology, UI/UX, Software Developement, Games, Self Improvement, Business',
+      },
+      {
+        name: `og:image`,
+        content: MelvicImage,
+      },
+      {
+        property: `og:type`,
+        content: `website`,
+      },
+    ],
+  },
+};
 
 const IndexPage: React.FC<PageProps<Props>> = ({ data, location }) => (
-  <Layout showMenuBar={false} location={location}>
+  <Layout showMenuBar={false} location={location} seo={meta}>
     <HeroSection />
     <SkillCompetencies />
     <RecentWorkSection projects={data.allContentfulProject.nodes || []} />

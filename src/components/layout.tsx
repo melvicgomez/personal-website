@@ -5,25 +5,15 @@ import NavigationMenuBar from '../molecules/NavigationMenuBar/NavigationMenuBar'
 import { Props } from '../types/common';
 // import PageLoadingScreen from '../components/PageLoadingScreen/PageLoadingScreen';
 
-export interface Meta {
-  name: string;
-  content: string;
-}
-
-export interface SEOProps {
-  meta: {
-    description: string;
-    lang: string;
-    meta: Meta[];
-    title: string;
-  };
-}
-
-const Layout: React.FC<Props> = ({ children, showMenuBar = true }) => {
+const Layout: React.FC<Props> = ({ children, showMenuBar = true, seo }) => {
   return (
     <StyledLayout className="h-screen">
       <div className="max-w-screen-2xl mx-auto">
-        <Seo title="Home" />
+        <Seo
+          title={seo?.meta.title || 'Home'}
+          description={seo?.meta.description}
+          meta={seo?.meta.keywords || []}
+        />
         {showMenuBar && <NavigationMenuBar />}
         {/* <PageLoadingScreen /> */}
         {children}

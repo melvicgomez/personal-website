@@ -32,7 +32,7 @@ exports.createPages = async ({ graphql, actions }) => {
           }
           appearance
           coverImage {
-            publicUrl
+            url
           }
         }
       }

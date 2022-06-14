@@ -7,7 +7,7 @@ import scrollTo from 'gatsby-plugin-smoothscroll';
 import SocialMedia from '../SocialMedia/SocialMedia';
 
 import AppLogo from '../../images/mg-icon-alt.png';
-import { Link, navigate } from 'gatsby';
+import { Link } from 'gatsby';
 
 const navigation = [
   {
@@ -110,15 +110,26 @@ const NavigationMenuBar = () => (
                 </div>
               </div>
               <div className="px-2 pt-5 pb-3 space-y-2 mr-1 ml-3">
-                {navigation.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="block px-3 py-2 text-lg font-medium text-white hover:text-red-700 hover:bg-amber-400"
-                  >
-                    {item.name}
-                  </a>
-                ))}
+                {navigation.map((item) =>
+                  !item.to.startsWith('#') ? (
+                    <Link
+                      className="block px-3 py-2 text-lg font-medium text-white hover:text-red-700 hover:bg-amber-400"
+                      to={item.to}
+                    >
+                      {item.name}
+                    </Link>
+                  ) : (
+                    <button
+                      key={item.name}
+                      className="block px-3 py-2 text-lg font-medium text-white hover:text-red-700 hover:bg-amber-400"
+                      onClick={() => {
+                        scrollTo(item.to);
+                      }}
+                    >
+                      {item.name}
+                    </button>
+                  )
+                )}
               </div>
             </div>
 

@@ -9,9 +9,7 @@ import { Link } from 'gatsby';
 const BlogCard: React.FC<Blog> = (props: Blog) => (
   <StyledCardWrapper className={props.className}>
     {props.appearance === BlogCardTypes.Medium && props.showImage && (
-      <>
-        <img src={props?.coverImage?.url} alt={props.title} className="mb-2" />
-      </>
+      <img src={props?.coverImage?.url} alt={props.title} className="mb-2" />
     )}
     <CategoryLabel category={props.category} />
     <p className="text-xl font-extrabold">{props.title}</p>

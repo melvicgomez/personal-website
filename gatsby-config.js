@@ -19,7 +19,7 @@ const gatsbyRequiredRules = path.join(
 module.exports = {
   siteMetadata: {
     title: `Melvic Gomez`,
-    description: `I am Melvic, full stack developer and UI designer enthusiast based in the Philippines with almost 5 years of experience on creating software application (mobile and web) and websites.`,
+    description: `Mabuhay! I am a full stack developer and UI/UX enthusiast from the Philippines with more than 7 years of experience on creating software application(web and mobile) and websites.`,
     author: `Melvic Gomez`,
     siteUrl: 'https://www.melvicgomez.com',
   },
