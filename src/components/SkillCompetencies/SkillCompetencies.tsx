@@ -93,17 +93,17 @@ const chartRawData: ChartData[] = [
 
   {
     label: 'Backend',
-    point: 10,
+    point: 9.5,
     color: 'rgba(255, 82, 82,0.8)',
   },
   {
     label: 'Project Management',
-    point: 4,
+    point: 5,
     color: 'rgba(34, 112, 147,0.8)',
   },
   {
     label: 'Team Management',
-    point: 4,
+    point: 5,
     color: 'rgba(33, 140, 116,0.8)',
   },
 ];

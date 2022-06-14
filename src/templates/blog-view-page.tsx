@@ -7,6 +7,7 @@ import { Blog, SEOProps } from '../types/common';
 import CategoryLabel from '../molecules/CategoryLabel/CategoryLabel';
 import { BlogCardTypes, ContentType } from '../types/contentful';
 import BlogContentNode from '../molecules/BlogContentNode/BlogContentNode';
+import AppLogo from '../images/mg-icon.jpg';
 
 const BlogViewPageTemplate: React.FC<PageProps> = ({ pageContext }) => {
   const blogData = pageContext as Blog;
@@ -25,6 +26,10 @@ const BlogViewPageTemplate: React.FC<PageProps> = ({ pageContext }) => {
         {
           property: `og:type`,
           content: `article`,
+        },
+        {
+          property: `og:image`,
+          content: AppLogo,
         },
       ],
     },

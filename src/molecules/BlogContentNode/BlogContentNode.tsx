@@ -49,7 +49,6 @@ const BlogContentNode: React.FC<ContentType & Props> = (
     contents.map((nodeToRender: NodeContentType) => {
       return nodeRenderGetValue(nodeToRender);
     });
-  console.log(contentChild());
   return React.createElement(
     parseNodeType(contentNode.nodeType, hasCodeMark),
     {

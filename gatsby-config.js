@@ -64,14 +64,15 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: 'G-RW0R4M3FWN',
-        head: false,
-        exclude: ['/404'],
-        sampleRate: 5,
-        siteSpeedSampleRate: 10,
-        cookieDomain: 'melvicgomez.com',
+        trackingIds: ['G-N2B7RSDD9X'],
+        pluginConfig: {
+          head: true,
+          respectDNT: false,
+          exclude: ['/404/'],
+          origin: 'https://www.melvicgomez.com',
+        },
       },
     },
     {

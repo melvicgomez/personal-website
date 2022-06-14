@@ -28,7 +28,7 @@ const meta: SEOProps = {
           'Melvic Gomez, Personal Website, Technology, UI/UX, Software Developement, Games, Self Improvement, Business',
       },
       {
-        name: `og:image`,
+        property: `og:image`,
         content: MelvicImage,
       },
       {

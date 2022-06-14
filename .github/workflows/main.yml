@@ -2,7 +2,10 @@ name: CI/CD
 
 on:
   push:
-    branches: [main]
+    branches: [master]
+  workflow_dispatch:
+    workflows: [Manually update the profile's README WakaTime]
+    branches: [master]
 
 jobs:
   build: # set depends on what you need
@@ -13,18 +16,16 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: 16
 
       - name: Create .env file
         env:
-          CMS_API_URL: ${{ secrets.CMS_API_URL }}
-          CMS_IDENTIFIER: ${{ secrets.CMS_IDENTIFIER }}
-          CMS_PASSWORD: ${{ secrets.CMS_PASSWORD }}
+          CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
+          CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
         run: |
           touch .env
-          echo "CMS_API_URL=$CMS_API_URL" >> .env
-          echo "CMS_IDENTIFIER=$CMS_IDENTIFIER" >> .env
-          echo "CMS_PASSWORD=$CMS_PASSWORD" >> .env
+          echo "CONTENTFUL_ACCESS_TOKEN=$CONTENTFUL_ACCESS_TOKEN" >> .env
+          echo "CONTENTFUL_SPACE_ID=$CONTENTFUL_SPACE_ID" >> .env
 
       - name: Install dependencies and build project
         run: |
