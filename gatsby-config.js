@@ -17,6 +17,7 @@ const gatsbyRequiredRules = path.join(
 );
 
 module.exports = {
+  trailingSlash : `ignore`,
   siteMetadata: {
     title: `Melvic Gomez`,
     description: `Mabuhay! I am a full stack developer and UI/UX enthusiast from the Philippines with more than 7 years of experience on creating software application(web and mobile) and websites.`,
@@ -79,19 +80,6 @@ module.exports = {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         policy: [{ userAgent: '*', allow: '/', disallow: '/404' }],
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-eslint',
-      options: {
-        // Gatsby required rules directory
-        rulePaths: [gatsbyRequiredRules],
-        // Default settings that may be ommitted or customized
-        stages: ['develop'],
-        extensions: ['js', 'jsx', 'ts', 'tsx'],
-        exclude: ['node_modules', 'bower_components', '.cache', 'public'],
-        // Any additional eslint-webpack-plugin options below
-        // ...
       },
     },
     {
