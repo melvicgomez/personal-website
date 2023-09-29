@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: 16
+          node-version: 18
 
       - name: Create .env file
         env:
@@ -52,14 +52,14 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: bundle-tar
+      
+      - name: Install lftp
+        run: sudo apt-get install lftp -y
 
-      - name: Upload bundle tar file in Hostinger using FTP
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
-        with:
-          server: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USERNAME }}
-          password: ${{ secrets.SERVER_PASSWORD }}
-          server-dir: ${{ secrets.FTP_ARCHIVE_DEST }}
+      - name: Upload Bundle Artifact via FTP
+        run: |
+          echo "FTP_ARCHIVE_DEST: ${{ secrets.FTP_ARCHIVE_DEST }}"
+          lftp -u ${{ secrets.SERVER_USERNAME }},${{ secrets.SERVER_PASSWORD }} -e "set ftp:ssl-allow no; put -O ${{ secrets.FTP_ARCHIVE_DEST }} bundle.tar.gz; quit" ${{ secrets.SERVER_HOST }}
 
       - name: Extract and copy files in public_html directory using ssh
         uses: appleboy/ssh-action@master
