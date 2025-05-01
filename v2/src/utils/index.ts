@@ -5,7 +5,7 @@ import {
   Marks,
   NodeContentType,
   NodeRenderType,
-} from './../types/contentful';
+} from '../types/contentful';
 import { ContentTypes } from '../types/contentful';
 
 export const parseNodeType = (

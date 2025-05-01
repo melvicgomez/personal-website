@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import Seo from '../components/seo';
+import Seo from './seo';
 import NavigationMenuBar from '../molecules/NavigationMenuBar/NavigationMenuBar';
 import { Props } from '../types/common';
 // import PageLoadingScreen from '../components/PageLoadingScreen/PageLoadingScreen';
