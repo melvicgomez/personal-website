@@ -54,17 +54,35 @@ const HeroSection = React.forwardRef<HTMLDivElement, DefaultProps>(
 
           <div>
             <Tooltip title="Github" arrow>
-              <IconButton aria-label="Github">
+              <IconButton
+                aria-label="Github"
+                component="a"
+                href="https://github.com/melvicgomez?tab=repositories"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <GitHub className="text-red-200" />
               </IconButton>
             </Tooltip>
             <Tooltip title="LinkedIn" arrow>
-              <IconButton aria-label="LinkedIn">
+              <IconButton
+                aria-label="LinkedIn"
+                component="a"
+                href="https://www.linkedin.com/in/melvicgomez/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <LinkedIn className="text-red-200" />
               </IconButton>
             </Tooltip>
             <Tooltip title="Résumé" arrow>
-              <IconButton aria-label="Résumé in PDF">
+              <IconButton
+                aria-label="Résumé in PDF"
+                component="a"
+                href="cv-melvicgomez-2025.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <PictureAsPdf className="text-red-200" />
               </IconButton>
             </Tooltip>
