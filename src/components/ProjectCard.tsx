@@ -7,7 +7,7 @@ const ProjectCard: React.FC<Project> = (props) => {
       className="
     flex-1 flex flex-col justify-center
     relative text-white
-    p-4 border-b border-white/30 last:border-b-0
+    p-4 border-b border-white/30 last:border-b-0 md:border-b-0
     md:min-w-md md:p-5 select-none
     md:after:absolute md:after:top-[10%] md:after:right-0 md:after:w-px md:after:h-[80%] md:after:bg-neutral-700 md:last:after:hidden
     "
