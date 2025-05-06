@@ -1,0 +1,215 @@
+[
+  {
+    "title": "NAVOO Frontend",
+    "role": "Senior Frontend Developer",
+    "year": 2025,
+    "shortDescription": "NAVOO is a comprehensive SaaS platform built on Microsoft 365, offering modular solutions for intranet, governance automation, and collaboration. I contributed to frontend development and customization of key modules using SPFx, Fluent UI, and Tailwind CSS, ensuring seamless integration with SharePoint and a consistent user experience across the Microsoft ecosystem.",
+    "stack": [
+      "SPFx",
+      "React",
+      "Fluent UI",
+      "Tailwind CSS",
+      "Microsoft 365",
+      "SharePoint Online"
+    ]
+  },
+  {
+    "title": "GUM",
+    "role": "Sole Developer (Frontend)",
+    "year": 2025,
+    "shortDescription": "GUM is a centralized solution for managing guest users in Microsoft 365 securely and efficiently. It’s delivered as a standalone web app, SharePoint app, and Microsoft Teams app, allowing organizations to control guest access with role-based permissions for viewing, editing, and creating users—all from one place.",
+    "stack": [
+      "SPFx",
+      "React",
+      "Fluent UI",
+      "Tailwind CSS",
+      "Microsoft 365",
+      "SharePoint Online"
+    ]
+  },
+  {
+    "title": "Board Management",
+    "role": "Sole Developer (Frontend)",
+    "year": 2025,
+    "shortDescription": "Digital meeting management solution designed to optimize board structures and workflows. Supports agenda creation, resource handling, and participant management with tight Microsoft 365 integration.",
+    "stack": [
+      "SPFx",
+      "React",
+      "Fluent UI",
+      "Tailwind CSS",
+      "Microsoft Graph API",
+      "Microsoft Teams SDK",
+      "SharePoint Online",
+      "Azure AD"
+    ]
+  },
+  {
+    "title": "Smart Archive",
+    "role": "Sole Developer (Frontend)",
+    "year": 2025,
+    "shortDescription": "SmartArchive is an SPFx-based command set tool integrated into SharePoint document libraries, enabling users to efficiently manage files, folders, and sites for archiving and restoration.",
+    "stack": ["SPFx", "React", "SharePoint Online", "Microsoft Graph API"]
+  },
+  {
+    "title": "Personal Websites V3",
+    "role": "Sole Developer",
+    "year": 2025,
+    "shortDescription": "Built to stay up to date with modern web trends using Next.js for hybrid rendering. Leveraged Vercel CI/CD, CloudFront, and Route 53 for performance and scalability.",
+    "stack": [
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+      "Route 53",
+      "CloudFront",
+      "Vercel",
+      "AWS S3"
+    ]
+  },
+  {
+    "title": "Territory Storage Solution",
+    "role": "Sole Developer",
+    "year": 2024,
+    "shortDescription": "A standalone React app with Tailwind CSS and Azure AD authentication for managing Azure Blob Storage. Admins can generate hashed SAS URLs that allow external users to access and manage files anonymously. The UI mimics Azure Storage for familiarity.",
+    "stack": [
+      "React",
+      "Tailwind CSS",
+      "Azure Blob Storage",
+      "Azure AD",
+      "SAS URL"
+    ]
+  },
+  {
+    "title": "AICPA and CIMA",
+    "role": "Senior Full Stack Developer",
+    "year": 2022,
+    "shortDescription": "A secure portal for accounting professionals to manage memberships. Served as acting team lead and lead reviewer for both frontend and backend, ensuring high standards through SonarQube and Sentry.",
+    "stack": [
+      "React",
+      "Express.js",
+      "GraphQL API",
+      "Salesforce",
+      "AWS Lambda",
+      "AWS SQS",
+      "AWS SNS",
+      "EC2",
+      "SonarQube",
+      "Sentry"
+    ]
+  },
+  {
+    "title": "Personal Websites V2",
+    "role": "Sole Developer",
+    "year": 2022,
+    "shortDescription": "Redesigned version of my portfolio using JAMstack principles and moved to AWS S3 and CloudFront for improved performance and scalability.",
+    "stack": [
+      "React",
+      "Gatsby",
+      "Server-Side Rendering",
+      "Contentful",
+      "GraphQL API",
+      "AWS S3",
+      "CloudFront",
+      "Redux",
+      "Tailwind CSS"
+    ]
+  },
+  {
+    "title": "LiveToGive",
+    "role": "Team Lead/Senior Full Stack Developer",
+    "year": 2021,
+    "shortDescription": "A social platform integrated with the Strava API, featuring posts, reactions, and a dynamic leaderboard. Led development and mentored junior devs. Delivered full-stack web and mobile in under 3 months.",
+    "stack": [
+      "PHP",
+      "Laravel",
+      "React",
+      "React Native",
+      "MySQL",
+      "AWS S3",
+      "Google Play Store",
+      "App Store",
+      "EC2",
+      "Route 53"
+    ]
+  },
+  {
+    "title": "MoonTrekker",
+    "role": "Team Lead/Senior Full Stack Developer",
+    "year": 2021,
+    "shortDescription": "A web, mobile, and backend leaderboard project adapted from LiveToGive. Reused over 95% of the codebase due to its clean architecture and efficient DB structure.",
+    "stack": [
+      "PHP",
+      "Laravel",
+      "React",
+      "React Native",
+      "MySQL",
+      "AWS S3",
+      "Google Play Store",
+      "App Store",
+      "EC2",
+      "Route 53"
+    ]
+  },
+  {
+    "title": "SYF Virtual Exhibition",
+    "role": "Senior Full Stack Developer",
+    "year": 2021,
+    "shortDescription": "Led frontend for a web/mobile virtual museum map, integrating Unity via WebGL and enabling real-time video performance with Stream.io.",
+    "stack": [
+      "React",
+      "React Native",
+      "Android",
+      "iOS",
+      "Stream.io",
+      "Unity",
+      "WebGL"
+    ]
+  },
+  {
+    "title": "PRIMECore",
+    "role": "Senior Full Stack Developer",
+    "year": 2020,
+    "shortDescription": "The flagship CRM of PRIME Philippines. I was one of the pioneer developers handling architecture and development across web, mobile, and backend layers.",
+    "stack": [
+      "React",
+      "React Native",
+      "Laravel",
+      "Express.js",
+      "Docker",
+      "MySQL",
+      "EC2",
+      "AWS S3",
+      "Route 53",
+      "Bootstrap"
+    ]
+  },
+  {
+    "title": "PRIME Philippines Website",
+    "role": "Senior Full Stack Developer",
+    "year": 2020,
+    "shortDescription": "From 2016 to 2020, I led the yearly updates of the PRIME Philippines website. Introduced a frontend migration from Laravel to React with PHP compatibility for legacy support.",
+    "stack": [
+      "PHP",
+      "Laravel",
+      "Shared Hosting",
+      "React",
+      "Redux",
+      "Ant Design",
+      "MySQL",
+      "AWS S3",
+      "Docker"
+    ]
+  },
+  {
+    "title": "Personal Websites V1",
+    "role": "Sole Developer",
+    "year": 2020,
+    "shortDescription": "The first iteration of my personal site using Gatsby, SSR, and Contentful CMS, deployed to shared hosting.",
+    "stack": [
+      "React",
+      "Gatsby",
+      "Server-Side Rendering",
+      "Contentful",
+      "GraphQL API"
+    ]
+  }
+]

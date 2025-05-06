@@ -1,0 +1,51 @@
+@import 'tailwindcss' important;
+
+@keyframes stroke-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-fill {
+  animation: stroke-draw 2s ease forwards;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+  animation-delay: 0s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+#project-div-elem::-webkit-scrollbar {
+  height: 8px;
+}
+
+#project-div-elem::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+}
+
+#project-div-elem::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 0, 0, 0.8);
+  border-radius: 9999px;
+}
+
+#project-div-elem {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 0, 0, 0.8) rgba(255, 255, 255, 0.05);
+}
+
+#experience-div-elem {
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+
+#experience-div-elem::-webkit-scrollbar {
+  display: none;
+}

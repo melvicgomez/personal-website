@@ -1,0 +1,64 @@
+[
+  {
+    "dtRange": "2022-06- 2025-03",
+    "company": "Arvato Systems Sdn Bhd",
+    "position": ["Technical Consultant (ReactJS Developer)"],
+    "description": "Within the first year at NAVOO, successfully managed, revitalized, and modernized all microfrontends, ensuring the platform's future-readiness. Subsequently, assigned to the Board Management application, I successfully revived the project, adding new features without relying on knowledge transfer from previous developers. This accomplishment showcases my ability to quickly adapt to new projects and drive innovation.",
+    "stack": ["ReactJS", "SPFx", "MSSQL", "Azure", "SharePoint Apps"]
+  },
+  {
+    "dtRange": "2021-09- 2022-04",
+    "company": "WeSupport Incorporated",
+    "position": ["ReactJS Developer"],
+    "description": "Within four months, was appointed as a key project lead, significantly contributing to a 50% increase in feature delivery and bug resolution. Served as a technical consultant to other teams, ensuring alignment with project requirements and contributing to overall project success.",
+    "stack": [
+      "ReactJS",
+      "Salesforce",
+      "RDBMS",
+      "AWS",
+      "Docker",
+      "Sentry",
+      "ExpressJS",
+      "NodeJS",
+      "GraphQL"
+    ]
+  },
+  {
+    "dtRange": "2021-01 — 2021-08",
+    "company": "AEP Enterprises Sdn Bhd",
+    "position": ["Android Developer"],
+    "description": "Successfully led the development of the LiveToGive app, delivering the project on time without sacrificing quality or architectural integrity. Within a year, I oversaw the development of three major projects: LiveToGive, MoonTrekker, and SYF Virtual Exhibition, demonstrating my ability to manage complex projects and deliver results under tight deadlines.",
+    "stack": ["ReactJS", "PHP", "Laravel", "MySQL", "RDBMS", "Shared Hosting"]
+  },
+  {
+    "dtRange": "2016-03 — 2020-11",
+    "company": "PRIME Philippines",
+    "position": [
+      "Senior Assistant Manager — IT Department",
+      "Assistant Manager — IT Department",
+      "Senior IT Officer",
+      "IT Officer"
+    ],
+    "description": "Served as a lead developer on PRIMECore CRM, a critical internal tool connecting sales, leasing, and business development teams. Successfully developed and implemented at least 7 web applications, and led annual website revamps, resulting in a 25-35% increase in website traffic across unique users, recurring users, and page visits. Reported directly to the CEO, playing a pivotal role in shaping the department's yearly budget, innovation goals, and hiring strategies.",
+    "stack": [
+      "ReactJS",
+      "PHP",
+      "Laravel",
+      "MySQL",
+      "RDBMS",
+      "AWS",
+      "Shared Hosting",
+      "Docker",
+      "Sentry",
+      "ExpressJS",
+      "NodeJS"
+    ]
+  },
+  {
+    "dtRange": "2015-05 — 2016-02",
+    "company": "PMTI",
+    "position": ["Android Developer"],
+    "description": "Within six months of joining the company, I successfully implemented MIFARE technology card into our Android applications following in-house training provided by NXP. This innovative integration contributed to securing significant projects, demonstrating my ability to quickly learn and apply new technologies to drive business growth.",
+    "stack": ["Kotlin", "Java", "Android Native", "NXP", "MIFARE Desfire"]
+  }
+]
