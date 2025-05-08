@@ -1,5 +1,22 @@
 [
   {
+    "title": "Project Morkx",
+    "role": "Sole Developer",
+    "year": 2025,
+    "shortDescription": "AI chatbot using OpenAI, Next, Express, EC2, ECR, Vercel, Docker, Tailwind CSS, and Github Action. The model in OpenAI is trained and inspired by my friend.",
+    "stack": [
+      "OpenAI",
+      "Next",
+      "Express",
+      "EC2",
+      "ECR",
+      "Vercel",
+      "Docker",
+      "Tailwind CSS",
+      "Github Action"
+    ]
+  },
+  {
     "title": "NAVOO Frontend",
     "role": "Senior Frontend Developer",
     "year": 2025,
